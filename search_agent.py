@@ -3,7 +3,15 @@ import re
 from typing import Dict, List, Tuple
 
 
-DATASET_PATH = "products.csv"
+DATASET_PATH = "smart_shopping_dataset.csv"
+
+CATEGORY_MAP = {
+    "laptop": "laptop",
+    "mobile": "smartphone",
+    "smartphone": "smartphone",
+    "tv": "television",
+    "television": "television",
+}
 
 
 def _to_int(text: str) -> int:
@@ -90,6 +98,7 @@ def search_agent(spec: Dict, dataset_path: str = DATASET_PATH, top_n: int = 5) -
     products = load_products(dataset_path)
 
     req_brand = str(spec.get("product", "unknown"))
+    req_category = CATEGORY_MAP.get(str(spec.get("category", "")).strip().lower(), "")
     req_ram_gb = _to_int(spec.get("RAM", ""))
     req_storage_min, req_storage_max = _extract_storage_range(spec.get("Storage", ""))
     req_storage_type = str(spec.get("Storage Type", "")).strip()
@@ -104,6 +113,10 @@ def search_agent(spec: Dict, dataset_path: str = DATASET_PATH, top_n: int = 5) -
 
     candidates: List[Dict] = []
     for item in products:
+        item_category = str(item.get("category", "")).strip().lower()
+        if req_category and item_category != req_category:
+            continue
+
         if not _brand_match(req_brand, item.get("name", "")):
             continue
 
@@ -130,7 +143,8 @@ def search_agent(spec: Dict, dataset_path: str = DATASET_PATH, top_n: int = 5) -
 
         scored_item = dict(item)
         # Higher rating is better; lower price is better.
-        scored_item["_score"] = item.get("rating", 0) * 100 - item.get("price", 0) * 0.01
+        # New dataset prices are much larger, so keep price penalty lighter.
+        scored_item["_score"] = item.get("rating", 0) * 100 - item.get("price", 0) * 0.001
         candidates.append(scored_item)
 
     if not req_budget and budget_type in {"low", "mid", "high"} and candidates:
@@ -157,6 +171,8 @@ def search_agent(spec: Dict, dataset_path: str = DATASET_PATH, top_n: int = 5) -
                 "Storage Type": row["Storage Type"],
                 "CPU": row["CPU"],
                 "GPU": row["GPU"],
+                "StoreName": row.get("StoreName", ""),
+                "Location": row.get("Location", ""),
             }
         )
 
