@@ -1,37 +1,450 @@
 [
     {
-        "input": "i need a cheep gaming laptop",
+        "input": "I need a low-budget HP laptop under 60000 LKR for general use. Prefer at least 8GB RAM, SSD storage, and a decent processor.",
         "output": {
+            "product": "HP",
+            "price": 60000,
             "category": "laptop",
-            "budget": 0
-        }
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
     },
     {
-        "input": "I need to get a laptop for Rs 150000 search a good laptop for me purpose is the gaming",
+        "input": "I need a low-budget HP gaming laptop under 80000 LKR with minimum 16GB RAM and a dedicated GPU.",
         "output": {
+            "product": "HP",
+            "price": 80000,
             "category": "laptop",
-            "budget": 150000
-        }
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "GTX 1650",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
     },
     {
-        "input": "cheap gaming notebook",
+        "input": "Low-budget HP laptop under 60000",
         "output": {
+            "product": "HP",
+            "price": 60000,
             "category": "laptop",
-            "budget": 0
-        }
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
     },
     {
-        "input": "cheap gaming notebook for 50000",
+        "input": "Low-budget Dragon laptop under 60000",
         "output": {
+            "product": "unknown",
+            "price": 60000,
             "category": "laptop",
-            "budget": 50000
-        }
+            "CPU": "",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
     },
     {
-        "input": "cheap gaming notebook",
+        "input": "Low-budget Dragon laptop under 60000",
         "output": {
+            "product": "unknown",
+            "price": 60000,
             "category": "laptop",
-            "budget": 0
-        }
+            "CPU": "",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "Low-budget Dragon laptop under 60000",
+        "output": {
+            "product": "unknown",
+            "price": 60000,
+            "category": "laptop",
+            "CPU": "",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "Low-budget Dragon laptop under 60000",
+        "output": {
+            "product": "Dragon",
+            "price": 60000,
+            "category": "laptop",
+            "CPU": "",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "I need a low-budget HP laptop under 60000 LKR for general use like browsing, MS Office, and online classes. Prefer at least 8GB RAM, SSD storage, and good battery life.",
+        "output": {
+            "product": "HP",
+            "price": 60000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "I\u2019m looking for a student laptop under 80000 LKR for studying, coding, and multitasking. It should have at least 8GB RAM, SSD storage, and a decent Intel i3 or Ryzen 3 processor.",
+        "output": {
+            "product": "unknown",
+            "price": 80000,
+            "category": "laptop",
+            "CPU": "Intel i3 / Ryzen 3",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "I need a high-performance ASUS laptop under 150000 LKR for programming, light gaming, and multitasking. Prefer 16GB RAM, SSD storage, and at least Intel i5 or Ryzen 5 processor.",
+        "output": {
+            "product": "ASUS",
+            "price": 150000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "GTX 1650",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "i want a buy a mid range asus laptop",
+        "output": {
+            "product": "ASUS",
+            "price": 0,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "Suggest me a gaming laptop under 200000 LKR that can run modern games smoothly. Prefer RTX GPU, 16GB RAM, SSD storage, and a high refresh rate display.",
+        "output": {
+            "product": "unknown",
+            "price": 200000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "RTX 3050",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "I need a lightweight laptop for university use under 120000 LKR. It should be portable, have good battery life, 8GB RAM minimum, and SSD storage.",
+        "output": {
+            "product": "unknown",
+            "price": 120000,
+            "category": "laptop",
+            "CPU": "",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "I\u2019m looking for a programming laptop under 100000 LKR that can handle coding, IDEs, and multitasking smoothly. Prefer at least 8GB RAM, SSD, and a good processor.",
+        "output": {
+            "product": "unknown",
+            "price": 100000,
+            "category": "laptop",
+            "CPU": "",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "Compare HP and Lenovo laptops under 80000 LKR. I need one for daily use, studying, and light work. Focus on performance, durability, and battery life.",
+        "output": {
+            "product": "HP",
+            "price": 80000,
+            "category": "laptop",
+            "CPU": "",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "Compare HP and Lenovo laptops under 80000 LKR. I need one for daily use, studying, and light work. Focus on performance, durability, and battery life.",
+        "output": {
+            "product": "unknown",
+            "price": 80000,
+            "category": "laptop",
+            "CPU": "",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "Compare HP and Lenovo laptops under 80000 LKR. I need one for daily use, studying, and light work. Focus on performance, durability, and battery life.",
+        "output": {
+            "product": "unknown",
+            "price": 80000,
+            "category": "laptop",
+            "CPU": "",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "I need a high-performance ASUS laptop under 150000 LKR for programming, light gaming, and multitasking. Prefer at least 16GB RAM, SSD storage (512GB or higher), and at least Intel i5 (11th gen or newer) or AMD Ryzen 5 processor. It should also have a dedicated GPU like RTX 2050 or RTX 3050 for smooth performance.",
+        "output": {
+            "product": "ASUS",
+            "price": 150000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "GTX 1650",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "I need a high-performance ASUS laptop under 150000 LKR for programming, light gaming, and multitasking. Prefer at least 16GB RAM, SSD storage (512GB or higher), and at least Intel i5 (11th gen or newer) or AMD Ryzen 5 processor. It should also have a dedicated GPU like RTX 2050 or RTX 3050 for smooth performance.",
+        "output": {
+            "product": "ASUS",
+            "price": 150000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "11th Gen+",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "RTX 2050",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "I need a low-budget HP laptop under 60000 LKR for basic tasks like browsing, MS Office, and online classes. Prefer at least 8GB RAM, SSD storage, and a decent entry-level processor like Intel i3 or AMD Ryzen 3. Battery life should be good for daily student use.",
+        "output": {
+            "product": "HP",
+            "price": 60000,
+            "category": "laptop",
+            "CPU": "Intel i3 / Ryzen 3",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "I need a student laptop under 80000 LKR for studying, coding, and multitasking. Prefer at least 8GB RAM, SSD storage, and a mid-range processor like Intel i3 12th gen or Ryzen 3/5. It should be reliable for long-term academic use.",
+        "output": {
+            "product": "unknown",
+            "price": 80000,
+            "category": "laptop",
+            "CPU": "Intel i3 / Ryzen 3/5",
+            "Generation": "12th Gen",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": " i need gaming asus laptop for 200000 lkr",
+        "output": {
+            "product": "ASUS",
+            "price": 200000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "11th Gen+",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "RTX 2050",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "I need a gaming laptop under 200000 LKR that can run modern games smoothly. Prefer at least 16GB RAM, SSD storage (512GB+), Intel i5/i7 or Ryzen 5/7 processor, and a dedicated GPU like RTX 3050 or RTX 4050. High refresh rate display is a plus.",
+        "output": {
+            "product": "ASUS",
+            "price": 200000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "RTX 3050",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "i need high end gaming laptop",
+        "output": {
+            "product": "unknown",
+            "price": 0,
+            "category": "laptop",
+            "CPU": "Intel i7 / Ryzen 7",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "RTX 3050",
+            "budgetType": "high"
+        },
+        "budgetType": "high"
+    },
+    {
+        "input": "i need high end gaming laptop asus for 500000",
+        "output": {
+            "product": "ASUS",
+            "price": 500000,
+            "category": "laptop",
+            "CPU": "Intel i7 / Ryzen 7",
+            "Generation": "",
+            "RAM": "32GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "RTX 4060",
+            "budgetType": "high"
+        },
+        "budgetType": "high"
+    },
+    {
+        "input": "I need a laptop under 120000 LKR for programming, development, and multitasking. Prefer at least 8GB\u201316GB RAM, SSD storage, and a strong CPU like Intel i5 or Ryzen 5. It should handle IDEs and multiple applications smoothly.",
+        "output": {
+            "product": "unknown",
+            "price": 120000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "I need a lightweight laptop under 100000 LKR for office work, meetings, and travel. Prefer at least 8GB RAM, SSD storage, and good battery life. CPU should be Intel i3/i5 or Ryzen 3/5 with integrated graphics.",
+        "output": {
+            "product": "unknown",
+            "price": 100000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "i need mid range MSi  ",
+        "output": {
+            "product": "MSI",
+            "price": 0,
+            "category": "unknown",
+            "CPU": "",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
     }
 ]

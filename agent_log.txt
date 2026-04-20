@@ -16,3 +16,54 @@
 {'category': 'laptop', 'budget': 0}
 {'category': 'laptop', 'budget': 50000}
 {'category': 'laptop', 'budget': 0}
+{'name': '', 'price': 50000, 'category': 'laptop', 'rating': 0.0, 'CPU': 'Intel i5 / Ryzen 5', 'Generation': '', 'RAM': '16GB', 'Storage Type': 'SSD', 'Storage': '512GB', 'GPU': 'GTX 1650'}
+{'name': 'ASUS Laptop', 'price': 180000, 'category': 'laptop', 'rating': 0.0, 'CPU': '', 'Generation': '', 'RAM': '', 'Storage Type': 'SSD', 'Storage': '512GB', 'GPU': ''}
+{'name': 'ASUS Laptop', 'price': 180000, 'category': 'laptop', 'rating': 0.0, 'CPU': '', 'Generation': '', 'RAM': '', 'Storage Type': 'SSD', 'Storage': '512GB', 'GPU': ''}
+{'name': 'ASUS Laptop', 'price': 180000, 'category': 'laptop', 'rating': 0.0, 'CPU': 'Intel i7 / Ryzen 7', 'Generation': '', 'RAM': '32GB', 'Storage Type': 'SSD', 'Storage': '512GB', 'GPU': 'RTX 4060'}
+{'name': 'ASUS Laptop', 'price': 180000, 'category': 'laptop', 'rating': 0.0, 'CPU': 'Intel i7 / Ryzen 7', 'Generation': '', 'RAM': '32GB', 'Storage Type': 'SSD', 'Storage': '512GB', 'GPU': 'RTX 4060'}
+{"name": "ASUS Laptop", "price": 180000, "category": "laptop", "rating": 0.0, "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "32GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 4060", "budgetType": "low"}
+{"name": "ASUS Laptop", "price": 180000, "category": "laptop", "rating": 0.0, "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "32GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 4060", "budgetType": "high"}
+{"name": "", "price": 180000, "category": "laptop", "rating": 0.0, "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "32GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 4060", "budgetType": "high"}
+{"name": "ZenBook Pro Duo UX581LV-XS71T", "price": 179999, "category": "laptop", "rating": 0, "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 4060", "budgetType": "high"}
+{"product": "ASUS", "price": 180000, "category": "laptop", "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 3050", "budgetType": "mid"}
+{"product": "ASUS", "price": 180000, "category": "laptop", "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 3050", "budgetType": "mid"}
+{"product": "ASUS", "price": 500000, "category": "laptop", "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 3050", "budgetType": "high"}
+{"product": "ASUS", "price": 180000, "category": "laptop", "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 3050", "budgetType": "mid"}
+{"product": "unknown", "price": 500000, "category": "laptop", "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "32GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 4060", "budgetType": "high"}
+{"product": "unknown", "price": 500000, "category": "laptop", "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "32GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 4060", "budgetType": "high"}
+{"product": "HP", "price": 500000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "high"}
+{"product": "HP", "price": 500000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "high"}
+{"product": "HP", "price": 100000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "HP", "price": 100000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "HP", "price": 60000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "0GB", "GPU": "", "budgetType": "low"}
+{"product": "HP", "price": 60000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "0GB", "GPU": "", "budgetType": "low"}
+{"product": "HP", "price": 60000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "", "GPU": "", "budgetType": "low"}
+{"product": "HP", "price": 60000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "HP", "price": 60000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "HP", "price": 80000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "GTX 1650", "budgetType": "low"}
+{"product": "HP", "price": 60000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "unknown", "price": 60000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "unknown", "price": 60000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "unknown", "price": 60000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "Dragon", "price": 60000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "HP", "price": 60000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "unknown", "price": 80000, "category": "laptop", "CPU": "Intel i3 / Ryzen 3", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "ASUS", "price": 150000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "GTX 1650", "budgetType": "mid"}
+{"product": "ASUS", "price": 0, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "mid"}
+{"product": "unknown", "price": 200000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 3050", "budgetType": "mid"}
+{"product": "unknown", "price": 120000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "mid"}
+{"product": "unknown", "price": 100000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "HP", "price": 80000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "unknown", "price": 80000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "unknown", "price": 80000, "category": "laptop", "CPU": "", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "ASUS", "price": 150000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "GTX 1650", "budgetType": "mid"}
+{"product": "ASUS", "price": 150000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "11th Gen+", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 2050", "budgetType": "mid"}
+{"product": "HP", "price": 60000, "category": "laptop", "CPU": "Intel i3 / Ryzen 3", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "unknown", "price": 80000, "category": "laptop", "CPU": "Intel i3 / Ryzen 3/5", "Generation": "12th Gen", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "ASUS", "price": 200000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "11th Gen+", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 2050", "budgetType": "mid"}
+{"product": "ASUS", "price": 200000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 3050", "budgetType": "mid"}
+{"product": "unknown", "price": 0, "category": "laptop", "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 3050", "budgetType": "high"}
+{"product": "ASUS", "price": 500000, "category": "laptop", "CPU": "Intel i7 / Ryzen 7", "Generation": "", "RAM": "32GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "RTX 4060", "budgetType": "high"}
+{"product": "unknown", "price": 120000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "16GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "mid"}
+{"product": "unknown", "price": 100000, "category": "laptop", "CPU": "Intel i5 / Ryzen 5", "Generation": "", "RAM": "8GB", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "low"}
+{"product": "MSI", "price": 0, "category": "unknown", "CPU": "", "Generation": "", "RAM": "", "Storage Type": "SSD", "Storage": "512GB", "GPU": "", "budgetType": "mid"}
