@@ -1,8 +1,13 @@
 from input_agent import input_agent
+from search_agent import search_agent
 
 user_input = input("Enter your request: ")
 
-result = input_agent(user_input)
+input_result = input_agent(user_input)
+search_result = search_agent(input_result)
 
-print("\nFinal Output:")
-print(result)
+print("\nInput Agent Output:")
+print(input_result)
+
+print("\nSearch Agent Output:")
+print(search_result)
