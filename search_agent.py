@@ -190,7 +190,8 @@ def search_agent(spec: Dict, dataset_path: str = DATASET_PATH, top_n: int = 5) -
     Returns:
     {
       "totalMatches": int,
-      "bestOption": {...} or None,
+            "resultMode": "true_match" | "closest_alternative",
+            "searchResults": {...} or None,
       "candidates": [...]
     }
     """
@@ -277,12 +278,15 @@ def search_agent(spec: Dict, dataset_path: str = DATASET_PATH, top_n: int = 5) -
 
         return candidates
 
+    used_relaxed_level = 0
     candidates = _collect_candidates(relaxed_level=0)
 
     # No-result fallback: relax a few strict constraints to return useful alternatives.
     if not candidates:
+        used_relaxed_level = 1
         candidates = _collect_candidates(relaxed_level=1)
     if not candidates:
+        used_relaxed_level = 2
         candidates = _collect_candidates(relaxed_level=2)
 
     if not req_budget and budget_type in {"low", "mid", "high"} and candidates:
@@ -298,6 +302,7 @@ def search_agent(spec: Dict, dataset_path: str = DATASET_PATH, top_n: int = 5) -
     ranked = sorted(candidates, key=lambda x: (x["_score"], x["rating"]), reverse=True)
 
     response_candidates = []
+    result_mode = "true_match" if used_relaxed_level == 0 else "closest_alternative"
     for row in ranked[:top_n]:
         response_candidates.append(
             {
@@ -311,11 +316,14 @@ def search_agent(spec: Dict, dataset_path: str = DATASET_PATH, top_n: int = 5) -
                 "GPU": row["GPU"],
                 "StoreName": row.get("StoreName", ""),
                 "Location": row.get("Location", ""),
+                "matchType": result_mode,
+                "relaxationLevel": used_relaxed_level,
             }
         )
 
     return {
         "totalMatches": len(ranked),
-        "bestOption": response_candidates[0] if response_candidates else None,
+        "resultMode": result_mode,
+        "searchResults": response_candidates[0] if response_candidates else None,
         "candidates": response_candidates,
     }
