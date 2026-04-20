@@ -1,7 +1,7 @@
 import json
 import os
 
-HISTORY_FILE = "history.json"
+HISTORY_FILE = "input_history.json"
 
 def load_history():
     if not os.path.exists(HISTORY_FILE):

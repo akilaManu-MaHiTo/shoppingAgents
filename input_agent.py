@@ -1,8 +1,8 @@
 from langchain_ollama import OllamaLLM
 import json
 
-from tools import clean_json, validate_input, normalize_category, log_input
-from history import get_recent_history, save_history
+from input_tools import clean_json, validate_input, normalize_category, log_input
+from input_history import get_recent_history, save_history
 
 llm = OllamaLLM(model="llama3")
 

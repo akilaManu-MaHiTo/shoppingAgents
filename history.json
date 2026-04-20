@@ -1,16 +1,16 @@
 [
     {
-        "input": "i need a cheep gaming laptop",
+        "input": "cheap gaming notebook",
         "output": {
             "category": "laptop",
             "budget": 0
         }
     },
     {
-        "input": "I need to get a laptop for Rs 150000 search a good laptop for me purpose is the gaming",
+        "input": "cheap gaming notebook for Rs 40000",
         "output": {
             "category": "laptop",
-            "budget": 150000
+            "budget": 40000
         }
     }
 ]
