@@ -1,0 +1,501 @@
+name,price,category,rating,CPU,Generation,RAM,Storage Type,Storage,GPU,StoreName,Location
+Lenovo IdeaPad 0,296754,Laptop,4.7,Intel i5,11th Gen,8GB,SSD,512GB,Integrated,Futureworld,Badulla
+Samsung Galaxy S21 1,204347,Smartphone,3.8,Apple A15,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Jaffna
+Lenovo IdeaPad 2,327392,Laptop,3.7,AMD Ryzen 7,12th Gen,32GB,SSD,1TB,RTX 3050,Redline,Anuradhapura
+iPhone 13 3,56951,Smartphone,4.6,Dimensity 900,Latest,8GB,Flash,512GB,Adreno/Mali/Apple GPU,Softlogic,Kalutara
+Samsung Galaxy S21 4,67279,Smartphone,4.6,Apple A15,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Abans,Jaffna
+Realme GT 5,259011,Smartphone,4.6,Snapdragon 8 Gen 2,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Abans,Galle
+HP Pavilion 6,399621,Laptop,3.8,Intel i7,11th Gen,32GB,SSD,256GB,Integrated,Singer,Negombo
+Xiaomi Redmi Note 12 7,298548,Smartphone,4.8,Apple A15,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Polonnaruwa
+Samsung Smart TV 8,234268,Television,4.4,Smart Processor,Latest,3GB,eMMC,55 inch,Integrated,Singer,Ratnapura
+Sony Bravia 9,554102,Television,4.3,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Abans,Trincomalee
+iPhone 13 10,291100,Smartphone,4.2,Snapdragon 680,Latest,4GB,Flash,512GB,Adreno/Mali/Apple GPU,Softlogic,Matale
+Xiaomi Redmi Note 12 11,276845,Smartphone,3.6,Snapdragon 8 Gen 2,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Abans,Kandy
+Hisense UHD TV 12,370188,Television,4.4,Smart Processor,Latest,1GB,eMMC,65 inch,Integrated,Redline,Kandy
+LG OLED TV 13,197328,Television,4.8,Smart Processor,Latest,2GB,eMMC,32 inch,Integrated,Futureworld,Colombo
+iPhone 13 14,273463,Smartphone,4.5,Snapdragon 680,Latest,4GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Matara
+LG OLED TV 15,315737,Television,4.6,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Redline,Jaffna
+LG OLED TV 16,507572,Television,3.6,Smart Processor,Latest,1GB,eMMC,43 inch,Integrated,Futureworld,Anuradhapura
+Asus VivoBook 17,277055,Laptop,3.6,Intel i5,11th Gen,16GB,SSD,512GB,Integrated,Redline,Kurunegala
+Samsung Galaxy S21 18,144265,Smartphone,4.2,Snapdragon 680,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Redline,Kurunegala
+TCL Android TV 19,471894,Television,4.3,Smart Processor,Latest,2GB,eMMC,43 inch,Integrated,Abans,Matara
+Lenovo IdeaPad 20,193409,Laptop,4.8,Intel i7,13th Gen,32GB,SSD,1TB,RTX 3060,Futureworld,Kurunegala
+Hisense UHD TV 21,181629,Television,3.5,Smart Processor,Latest,1GB,Flash,32 inch,Integrated,Abans,Negombo
+Acer Aspire 22,183448,Laptop,4.8,Intel i5,11th Gen,8GB,SSD,256GB,NVIDIA GTX 1650,Futureworld,Matale
+Sony Bravia 23,278152,Television,4.5,Smart Processor,Latest,4GB,Flash,43 inch,Integrated,Redline,Anuradhapura
+Asus VivoBook 24,160838,Laptop,3.6,AMD Ryzen 5,13th Gen,16GB,SSD,512GB,NVIDIA GTX 1650,Singer,Kalutara
+HP Pavilion 25,357900,Laptop,3.5,AMD Ryzen 5,12th Gen,32GB,SSD,1TB,NVIDIA GTX 1650,Redline,Badulla
+Acer Aspire 26,135751,Laptop,4.6,AMD Ryzen 7,10th Gen,8GB,SSD,512GB,Integrated,Softlogic,Galle
+iPhone 13 27,184417,Smartphone,4.5,Apple A15,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Singer,Badulla
+HP Pavilion 28,362483,Laptop,4.6,AMD Ryzen 7,11th Gen,32GB,SSD,256GB,NVIDIA GTX 1650,Singer,Kurunegala
+Samsung Smart TV 29,343649,Television,4.0,Smart Processor,Latest,3GB,eMMC,55 inch,Integrated,Singer,Matara
+Samsung Smart TV 30,110541,Television,3.8,Smart Processor,Latest,3GB,Flash,43 inch,Integrated,Singer,Polonnaruwa
+iPhone 13 31,173969,Smartphone,4.4,Dimensity 900,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Futureworld,Batticaloa
+HP Pavilion 32,395497,Laptop,3.8,Intel i5,13th Gen,8GB,SSD,1TB,NVIDIA GTX 1650,Abans,Trincomalee
+Samsung Smart TV 33,121723,Television,4.9,Smart Processor,Latest,3GB,Flash,32 inch,Integrated,Redline,Negombo
+LG OLED TV 34,301561,Television,4.6,Smart Processor,Latest,4GB,eMMC,43 inch,Integrated,Abans,Negombo
+TCL Android TV 35,242182,Television,3.6,Smart Processor,Latest,3GB,eMMC,32 inch,Integrated,Singer,Ratnapura
+Samsung Smart TV 36,282984,Television,4.6,Smart Processor,Latest,2GB,eMMC,32 inch,Integrated,Futureworld,Polonnaruwa
+Hisense UHD TV 37,566628,Television,4.4,Smart Processor,Latest,1GB,Flash,32 inch,Integrated,Singer,Galle
+iPhone 13 38,231380,Smartphone,4.2,Snapdragon 8 Gen 2,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Singer,Kurunegala
+Samsung Galaxy S21 39,193568,Smartphone,4.6,Apple A15,Latest,4GB,Flash,64GB,Adreno/Mali/Apple GPU,Softlogic,Badulla
+TCL Android TV 40,387365,Television,4.7,Smart Processor,Latest,2GB,eMMC,43 inch,Integrated,Softlogic,Polonnaruwa
+Asus VivoBook 41,198821,Laptop,4.5,AMD Ryzen 5,12th Gen,8GB,SSD,512GB,RTX 3060,Softlogic,Negombo
+Acer Aspire 42,273303,Laptop,4.8,AMD Ryzen 5,10th Gen,16GB,SSD,256GB,Integrated,Redline,Matara
+LG OLED TV 43,118294,Television,4.3,Smart Processor,Latest,3GB,eMMC,32 inch,Integrated,Redline,Galle
+iPhone 13 44,286716,Smartphone,3.8,Snapdragon 8 Gen 2,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Galle
+Acer Aspire 45,378843,Laptop,4.5,Intel i3,10th Gen,8GB,SSD,256GB,NVIDIA GTX 1650,Softlogic,Kalutara
+iPhone 13 46,209722,Smartphone,4.2,Snapdragon 680,Latest,4GB,Flash,512GB,Adreno/Mali/Apple GPU,Futureworld,Badulla
+Lenovo IdeaPad 47,151097,Laptop,4.4,AMD Ryzen 7,13th Gen,16GB,SSD,256GB,RTX 3050,Redline,Badulla
+iPhone 13 48,121412,Smartphone,3.5,Apple A15,Latest,8GB,Flash,256GB,Adreno/Mali/Apple GPU,Redline,Matara
+Realme GT 49,56569,Smartphone,3.6,Snapdragon 680,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Futureworld,Kurunegala
+Xiaomi Redmi Note 12 50,176286,Smartphone,4.1,Apple A15,Latest,6GB,Flash,256GB,Adreno/Mali/Apple GPU,Abans,Kalutara
+iPhone 13 51,53515,Smartphone,4.2,Dimensity 900,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Abans,Matale
+Samsung Smart TV 52,403930,Television,4.3,Smart Processor,Latest,4GB,eMMC,55 inch,Integrated,Redline,Matale
+LG OLED TV 53,219684,Television,4.8,Smart Processor,Latest,4GB,eMMC,32 inch,Integrated,Abans,Kurunegala
+Hisense UHD TV 54,180662,Television,4.6,Smart Processor,Latest,1GB,Flash,32 inch,Integrated,Softlogic,Kandy
+HP Pavilion 55,409007,Laptop,3.5,AMD Ryzen 7,13th Gen,32GB,SSD,512GB,RTX 3050,Singer,Ratnapura
+LG OLED TV 56,523323,Television,4.6,Smart Processor,Latest,1GB,eMMC,65 inch,Integrated,Singer,Colombo
+iPhone 13 57,202398,Smartphone,3.6,Apple A15,Latest,4GB,Flash,128GB,Adreno/Mali/Apple GPU,Redline,Matara
+Xiaomi Redmi Note 12 58,124424,Smartphone,3.6,Apple A15,Latest,4GB,Flash,128GB,Adreno/Mali/Apple GPU,Softlogic,Jaffna
+Samsung Galaxy S21 59,294771,Smartphone,4.8,Snapdragon 680,Latest,8GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Matara
+Xiaomi Redmi Note 12 60,85761,Smartphone,3.8,Snapdragon 8 Gen 2,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Kandy
+TCL Android TV 61,533805,Television,4.3,Smart Processor,Latest,1GB,eMMC,32 inch,Integrated,Singer,Matara
+Acer Aspire 62,371240,Laptop,4.3,AMD Ryzen 7,12th Gen,16GB,SSD,512GB,NVIDIA GTX 1650,Abans,Kandy
+Samsung Galaxy S21 63,102479,Smartphone,4.7,Snapdragon 8 Gen 2,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Abans,Matara
+Hisense UHD TV 64,597321,Television,4.4,Smart Processor,Latest,2GB,eMMC,65 inch,Integrated,Futureworld,Trincomalee
+Samsung Galaxy S21 65,188097,Smartphone,4.1,Apple A15,Latest,4GB,Flash,64GB,Adreno/Mali/Apple GPU,Redline,Colombo
+Realme GT 66,198392,Smartphone,4.2,Apple A15,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Polonnaruwa
+LG OLED TV 67,198793,Television,4.7,Smart Processor,Latest,4GB,Flash,32 inch,Integrated,Abans,Polonnaruwa
+Samsung Smart TV 68,400436,Television,4.2,Smart Processor,Latest,1GB,Flash,32 inch,Integrated,Futureworld,Batticaloa
+LG OLED TV 69,312231,Television,3.9,Smart Processor,Latest,2GB,eMMC,65 inch,Integrated,Abans,Negombo
+iPhone 13 70,122443,Smartphone,3.6,Apple A15,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Singer,Batticaloa
+LG OLED TV 71,391387,Television,3.6,Smart Processor,Latest,1GB,eMMC,32 inch,Integrated,Abans,Matale
+Sony Bravia 72,505228,Television,4.1,Smart Processor,Latest,2GB,Flash,32 inch,Integrated,Abans,Matale
+Xiaomi Redmi Note 12 73,111618,Smartphone,4.5,Snapdragon 8 Gen 2,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Softlogic,Badulla
+Asus VivoBook 74,345735,Laptop,3.8,Intel i5,12th Gen,16GB,SSD,256GB,RTX 3060,Futureworld,Polonnaruwa
+LG OLED TV 75,533479,Television,3.9,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Abans,Polonnaruwa
+Sony Bravia 76,528089,Television,4.9,Smart Processor,Latest,1GB,eMMC,65 inch,Integrated,Abans,Kandy
+HP Pavilion 77,430277,Laptop,4.3,AMD Ryzen 7,11th Gen,16GB,SSD,256GB,RTX 3060,Futureworld,Matale
+TCL Android TV 78,561179,Television,4.9,Smart Processor,Latest,3GB,eMMC,65 inch,Integrated,Abans,Colombo
+Acer Aspire 79,252406,Laptop,4.4,AMD Ryzen 5,13th Gen,8GB,SSD,256GB,NVIDIA GTX 1650,Softlogic,Jaffna
+Xiaomi Redmi Note 12 80,63530,Smartphone,4.7,Snapdragon 680,Latest,6GB,Flash,128GB,Adreno/Mali/Apple GPU,Abans,Anuradhapura
+Realme GT 81,143459,Smartphone,4.3,Snapdragon 8 Gen 2,Latest,4GB,Flash,64GB,Adreno/Mali/Apple GPU,Futureworld,Colombo
+TCL Android TV 82,514394,Television,4.2,Smart Processor,Latest,3GB,eMMC,65 inch,Integrated,Futureworld,Badulla
+OnePlus 11 83,196808,Smartphone,3.5,Snapdragon 8 Gen 2,Latest,8GB,Flash,64GB,Adreno/Mali/Apple GPU,Singer,Negombo
+Asus VivoBook 84,261627,Laptop,4.0,Intel i3,11th Gen,32GB,SSD,1TB,RTX 3060,Singer,Negombo
+TCL Android TV 85,210429,Television,4.6,Smart Processor,Latest,4GB,Flash,55 inch,Integrated,Futureworld,Kalutara
+HP Pavilion 86,420621,Laptop,4.6,Intel i5,11th Gen,32GB,SSD,256GB,NVIDIA GTX 1650,Redline,Trincomalee
+Dell Inspiron 87,201761,Laptop,4.4,AMD Ryzen 7,13th Gen,16GB,SSD,1TB,RTX 3050,Futureworld,Kandy
+Dell Inspiron 88,233148,Laptop,4.3,AMD Ryzen 5,11th Gen,32GB,SSD,256GB,Integrated,Singer,Matale
+Acer Aspire 89,123942,Laptop,4.6,Intel i3,12th Gen,16GB,SSD,256GB,RTX 3060,Softlogic,Jaffna
+LG OLED TV 90,390757,Television,3.6,Smart Processor,Latest,4GB,eMMC,65 inch,Integrated,Singer,Polonnaruwa
+Realme GT 91,83211,Smartphone,4.2,Snapdragon 680,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Futureworld,Badulla
+Xiaomi Redmi Note 12 92,143159,Smartphone,4.5,Snapdragon 8 Gen 2,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Abans,Ratnapura
+LG OLED TV 93,579811,Television,3.7,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Redline,Kurunegala
+Dell Inspiron 94,441473,Laptop,4.5,AMD Ryzen 5,11th Gen,8GB,SSD,512GB,Integrated,Singer,Galle
+LG OLED TV 95,597680,Television,3.9,Smart Processor,Latest,2GB,Flash,65 inch,Integrated,Softlogic,Jaffna
+Asus VivoBook 96,422990,Laptop,4.3,Intel i5,10th Gen,16GB,SSD,512GB,Integrated,Redline,Matale
+Dell Inspiron 97,223804,Laptop,4.2,Intel i3,11th Gen,16GB,SSD,512GB,Integrated,Singer,Kurunegala
+Samsung Galaxy S21 98,287025,Smartphone,4.1,Snapdragon 8 Gen 2,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Singer,Matara
+TCL Android TV 99,121682,Television,4.5,Smart Processor,Latest,1GB,eMMC,65 inch,Integrated,Redline,Kalutara
+Samsung Galaxy S21 100,64256,Smartphone,3.9,Dimensity 900,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Redline,Galle
+Xiaomi Redmi Note 12 101,52223,Smartphone,4.3,Snapdragon 8 Gen 2,Latest,6GB,Flash,64GB,Adreno/Mali/Apple GPU,Singer,Negombo
+Dell Inspiron 102,132224,Laptop,4.2,Intel i5,13th Gen,8GB,SSD,1TB,NVIDIA GTX 1650,Redline,Galle
+Dell Inspiron 103,164061,Laptop,4.7,Intel i3,13th Gen,8GB,SSD,512GB,Integrated,Futureworld,Negombo
+Samsung Galaxy S21 104,64918,Smartphone,3.8,Snapdragon 8 Gen 2,Latest,12GB,Flash,128GB,Adreno/Mali/Apple GPU,Futureworld,Matara
+Samsung Smart TV 105,464389,Television,3.9,Smart Processor,Latest,3GB,eMMC,65 inch,Integrated,Redline,Matara
+Acer Aspire 106,234685,Laptop,4.5,Intel i3,11th Gen,16GB,SSD,1TB,RTX 3060,Softlogic,Kurunegala
+Xiaomi Redmi Note 12 107,145264,Smartphone,4.7,Snapdragon 680,Latest,4GB,Flash,64GB,Adreno/Mali/Apple GPU,Softlogic,Ratnapura
+Samsung Smart TV 108,399473,Television,4.6,Smart Processor,Latest,1GB,eMMC,43 inch,Integrated,Softlogic,Matara
+iPhone 13 109,60024,Smartphone,3.5,Apple A15,Latest,4GB,Flash,64GB,Adreno/Mali/Apple GPU,Redline,Batticaloa
+Hisense UHD TV 110,543529,Television,4.7,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Redline,Matara
+Dell Inspiron 111,297187,Laptop,3.5,AMD Ryzen 5,12th Gen,8GB,SSD,256GB,Integrated,Singer,Matara
+HP Pavilion 112,291699,Laptop,4.4,Intel i7,12th Gen,8GB,SSD,512GB,Integrated,Redline,Anuradhapura
+HP Pavilion 113,381809,Laptop,3.5,AMD Ryzen 5,13th Gen,8GB,SSD,256GB,Integrated,Abans,Trincomalee
+Samsung Smart TV 114,541047,Television,4.8,Smart Processor,Latest,2GB,eMMC,65 inch,Integrated,Softlogic,Jaffna
+Asus VivoBook 115,447558,Laptop,4.6,AMD Ryzen 7,11th Gen,8GB,SSD,1TB,Integrated,Softlogic,Colombo
+Dell Inspiron 116,301384,Laptop,4.0,Intel i7,11th Gen,32GB,SSD,1TB,NVIDIA GTX 1650,Abans,Trincomalee
+Lenovo IdeaPad 117,268583,Laptop,4.9,AMD Ryzen 7,13th Gen,16GB,SSD,512GB,RTX 3060,Singer,Kurunegala
+TCL Android TV 118,186709,Television,4.3,Smart Processor,Latest,3GB,Flash,43 inch,Integrated,Abans,Matale
+Samsung Smart TV 119,144546,Television,4.7,Smart Processor,Latest,3GB,eMMC,65 inch,Integrated,Futureworld,Colombo
+Asus VivoBook 120,391541,Laptop,4.0,Intel i5,10th Gen,32GB,SSD,1TB,Integrated,Abans,Kurunegala
+Sony Bravia 121,297090,Television,3.5,Smart Processor,Latest,2GB,Flash,43 inch,Integrated,Singer,Matale
+Lenovo IdeaPad 122,472948,Laptop,4.8,AMD Ryzen 5,11th Gen,16GB,SSD,512GB,NVIDIA GTX 1650,Softlogic,Kandy
+Samsung Galaxy S21 123,241800,Smartphone,4.8,Apple A15,Latest,6GB,Flash,64GB,Adreno/Mali/Apple GPU,Softlogic,Batticaloa
+iPhone 13 124,190803,Smartphone,3.5,Dimensity 900,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Futureworld,Trincomalee
+Samsung Smart TV 125,449624,Television,4.1,Smart Processor,Latest,2GB,Flash,65 inch,Integrated,Redline,Batticaloa
+Xiaomi Redmi Note 12 126,74585,Smartphone,4.8,Snapdragon 8 Gen 2,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Softlogic,Trincomalee
+Acer Aspire 127,283725,Laptop,4.6,Intel i7,10th Gen,8GB,SSD,512GB,RTX 3050,Redline,Ratnapura
+HP Pavilion 128,359326,Laptop,4.6,Intel i7,13th Gen,8GB,SSD,1TB,NVIDIA GTX 1650,Abans,Ratnapura
+Realme GT 129,197476,Smartphone,3.6,Snapdragon 8 Gen 2,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Matara
+Hisense UHD TV 130,580891,Television,4.6,Smart Processor,Latest,4GB,eMMC,32 inch,Integrated,Abans,Batticaloa
+Realme GT 131,183588,Smartphone,4.6,Apple A15,Latest,4GB,Flash,64GB,Adreno/Mali/Apple GPU,Softlogic,Matale
+Hisense UHD TV 132,396190,Television,4.0,Smart Processor,Latest,2GB,Flash,43 inch,Integrated,Abans,Matara
+HP Pavilion 133,383340,Laptop,4.8,Intel i5,11th Gen,32GB,SSD,1TB,Integrated,Abans,Kandy
+Lenovo IdeaPad 134,203786,Laptop,4.1,Intel i3,12th Gen,16GB,SSD,1TB,Integrated,Softlogic,Kalutara
+OnePlus 11 135,219535,Smartphone,4.6,Apple A15,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Redline,Negombo
+Dell Inspiron 136,346009,Laptop,4.9,Intel i7,10th Gen,8GB,SSD,256GB,RTX 3050,Futureworld,Matara
+iPhone 13 137,78015,Smartphone,4.3,Apple A15,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Redline,Matale
+HP Pavilion 138,276760,Laptop,4.7,Intel i5,13th Gen,32GB,SSD,256GB,RTX 3060,Singer,Batticaloa
+Lenovo IdeaPad 139,201806,Laptop,3.5,Intel i3,13th Gen,32GB,SSD,256GB,RTX 3050,Softlogic,Kalutara
+Samsung Smart TV 140,388043,Television,4.8,Smart Processor,Latest,2GB,eMMC,32 inch,Integrated,Futureworld,Trincomalee
+LG OLED TV 141,314849,Television,3.7,Smart Processor,Latest,4GB,Flash,65 inch,Integrated,Futureworld,Badulla
+Dell Inspiron 142,204773,Laptop,3.7,Intel i5,13th Gen,32GB,SSD,512GB,NVIDIA GTX 1650,Abans,Polonnaruwa
+Acer Aspire 143,334682,Laptop,4.5,AMD Ryzen 7,10th Gen,8GB,SSD,512GB,NVIDIA GTX 1650,Singer,Kalutara
+Xiaomi Redmi Note 12 144,130699,Smartphone,3.6,Apple A15,Latest,6GB,Flash,128GB,Adreno/Mali/Apple GPU,Softlogic,Kandy
+Xiaomi Redmi Note 12 145,208656,Smartphone,4.3,Snapdragon 680,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Abans,Matara
+LG OLED TV 146,174212,Television,4.3,Smart Processor,Latest,3GB,eMMC,65 inch,Integrated,Softlogic,Badulla
+Acer Aspire 147,234841,Laptop,3.7,Intel i5,11th Gen,32GB,SSD,512GB,RTX 3050,Abans,Trincomalee
+Samsung Galaxy S21 148,285950,Smartphone,4.0,Apple A15,Latest,12GB,Flash,128GB,Adreno/Mali/Apple GPU,Redline,Kalutara
+LG OLED TV 149,106941,Television,4.6,Smart Processor,Latest,2GB,Flash,55 inch,Integrated,Futureworld,Negombo
+LG OLED TV 150,470116,Television,3.9,Smart Processor,Latest,1GB,eMMC,32 inch,Integrated,Singer,Badulla
+Realme GT 151,104076,Smartphone,4.5,Snapdragon 8 Gen 2,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Redline,Matale
+Hisense UHD TV 152,463044,Television,4.6,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Redline,Matara
+iPhone 13 153,117393,Smartphone,4.6,Snapdragon 8 Gen 2,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Softlogic,Kandy
+Samsung Smart TV 154,190852,Television,4.2,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Redline,Matara
+HP Pavilion 155,280958,Laptop,4.7,AMD Ryzen 5,13th Gen,32GB,SSD,256GB,RTX 3060,Singer,Ratnapura
+Lenovo IdeaPad 156,220359,Laptop,4.7,AMD Ryzen 7,10th Gen,8GB,SSD,512GB,Integrated,Futureworld,Kandy
+OnePlus 11 157,116302,Smartphone,4.0,Snapdragon 8 Gen 2,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Softlogic,Matale
+Hisense UHD TV 158,508111,Television,4.7,Smart Processor,Latest,2GB,eMMC,32 inch,Integrated,Softlogic,Jaffna
+TCL Android TV 159,519397,Television,4.7,Smart Processor,Latest,2GB,Flash,55 inch,Integrated,Abans,Negombo
+HP Pavilion 160,294241,Laptop,4.3,AMD Ryzen 7,11th Gen,32GB,SSD,512GB,NVIDIA GTX 1650,Abans,Trincomalee
+Hisense UHD TV 161,214943,Television,3.6,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Abans,Polonnaruwa
+Acer Aspire 162,183709,Laptop,3.8,Intel i5,11th Gen,32GB,SSD,256GB,RTX 3060,Futureworld,Matara
+Hisense UHD TV 163,423063,Television,4.5,Smart Processor,Latest,2GB,Flash,43 inch,Integrated,Futureworld,Kandy
+iPhone 13 164,120255,Smartphone,4.4,Snapdragon 680,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Abans,Galle
+Samsung Smart TV 165,122610,Television,4.3,Smart Processor,Latest,2GB,Flash,65 inch,Integrated,Softlogic,Jaffna
+TCL Android TV 166,125261,Television,4.4,Smart Processor,Latest,3GB,eMMC,65 inch,Integrated,Softlogic,Trincomalee
+TCL Android TV 167,554655,Television,4.2,Smart Processor,Latest,3GB,eMMC,32 inch,Integrated,Abans,Jaffna
+Acer Aspire 168,311349,Laptop,4.7,Intel i5,10th Gen,32GB,SSD,1TB,Integrated,Abans,Negombo
+Realme GT 169,175334,Smartphone,4.2,Snapdragon 8 Gen 2,Latest,4GB,Flash,64GB,Adreno/Mali/Apple GPU,Futureworld,Polonnaruwa
+Samsung Smart TV 170,365647,Television,3.9,Smart Processor,Latest,4GB,eMMC,43 inch,Integrated,Futureworld,Colombo
+Realme GT 171,108100,Smartphone,3.8,Dimensity 900,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Redline,Anuradhapura
+Realme GT 172,111205,Smartphone,4.8,Snapdragon 8 Gen 2,Latest,4GB,Flash,64GB,Adreno/Mali/Apple GPU,Futureworld,Kandy
+Acer Aspire 173,440437,Laptop,4.9,Intel i5,11th Gen,8GB,SSD,256GB,Integrated,Singer,Ratnapura
+Samsung Smart TV 174,133657,Television,4.3,Smart Processor,Latest,2GB,Flash,43 inch,Integrated,Softlogic,Galle
+iPhone 13 175,79781,Smartphone,4.4,Apple A15,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Abans,Jaffna
+Sony Bravia 176,242845,Television,4.2,Smart Processor,Latest,4GB,Flash,32 inch,Integrated,Abans,Galle
+Hisense UHD TV 177,236536,Television,3.8,Smart Processor,Latest,4GB,eMMC,55 inch,Integrated,Abans,Batticaloa
+Samsung Galaxy S21 178,272646,Smartphone,3.7,Apple A15,Latest,12GB,Flash,128GB,Adreno/Mali/Apple GPU,Redline,Ratnapura
+Dell Inspiron 179,483892,Laptop,4.8,Intel i7,11th Gen,8GB,SSD,1TB,RTX 3060,Redline,Negombo
+Realme GT 180,121714,Smartphone,4.2,Snapdragon 680,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Abans,Anuradhapura
+Dell Inspiron 181,350288,Laptop,3.6,Intel i5,10th Gen,16GB,SSD,1TB,RTX 3060,Softlogic,Matara
+Samsung Smart TV 182,256531,Television,3.6,Smart Processor,Latest,3GB,Flash,32 inch,Integrated,Softlogic,Matara
+Dell Inspiron 183,268263,Laptop,3.7,AMD Ryzen 5,13th Gen,16GB,SSD,256GB,RTX 3050,Softlogic,Jaffna
+OnePlus 11 184,244297,Smartphone,4.0,Dimensity 900,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Singer,Colombo
+Acer Aspire 185,145702,Laptop,3.8,Intel i7,10th Gen,32GB,SSD,256GB,RTX 3060,Singer,Matara
+iPhone 13 186,111631,Smartphone,3.9,Apple A15,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Futureworld,Matale
+Asus VivoBook 187,231133,Laptop,4.5,AMD Ryzen 5,10th Gen,8GB,SSD,256GB,RTX 3060,Redline,Trincomalee
+Dell Inspiron 188,444462,Laptop,3.9,Intel i7,10th Gen,16GB,SSD,256GB,Integrated,Futureworld,Kalutara
+Acer Aspire 189,302313,Laptop,3.6,Intel i7,13th Gen,32GB,SSD,1TB,RTX 3050,Futureworld,Kalutara
+TCL Android TV 190,365351,Television,3.7,Smart Processor,Latest,4GB,eMMC,43 inch,Integrated,Redline,Jaffna
+Hisense UHD TV 191,344864,Television,4.0,Smart Processor,Latest,4GB,eMMC,43 inch,Integrated,Singer,Ratnapura
+Hisense UHD TV 192,340997,Television,4.0,Smart Processor,Latest,1GB,eMMC,32 inch,Integrated,Redline,Matara
+Samsung Smart TV 193,370939,Television,4.4,Smart Processor,Latest,1GB,Flash,32 inch,Integrated,Abans,Galle
+Hisense UHD TV 194,572072,Television,4.0,Smart Processor,Latest,2GB,Flash,55 inch,Integrated,Futureworld,Trincomalee
+Xiaomi Redmi Note 12 195,234557,Smartphone,3.9,Apple A15,Latest,4GB,Flash,128GB,Adreno/Mali/Apple GPU,Singer,Matale
+Sony Bravia 196,334155,Television,4.1,Smart Processor,Latest,3GB,Flash,43 inch,Integrated,Redline,Anuradhapura
+Samsung Smart TV 197,529360,Television,4.5,Smart Processor,Latest,2GB,eMMC,43 inch,Integrated,Softlogic,Kandy
+Samsung Smart TV 198,82361,Television,3.8,Smart Processor,Latest,2GB,eMMC,32 inch,Integrated,Futureworld,Batticaloa
+HP Pavilion 199,488298,Laptop,4.3,Intel i5,10th Gen,16GB,SSD,512GB,Integrated,Redline,Jaffna
+OnePlus 11 200,240134,Smartphone,4.3,Snapdragon 680,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Futureworld,Badulla
+Sony Bravia 201,89563,Television,3.7,Smart Processor,Latest,2GB,eMMC,65 inch,Integrated,Singer,Polonnaruwa
+LG OLED TV 202,202157,Television,3.5,Smart Processor,Latest,1GB,Flash,65 inch,Integrated,Futureworld,Matara
+Dell Inspiron 203,308287,Laptop,4.5,Intel i7,11th Gen,8GB,SSD,1TB,NVIDIA GTX 1650,Redline,Badulla
+Acer Aspire 204,470422,Laptop,4.0,Intel i7,10th Gen,16GB,SSD,512GB,RTX 3050,Singer,Matara
+Hisense UHD TV 205,339450,Television,4.8,Smart Processor,Latest,3GB,Flash,55 inch,Integrated,Redline,Colombo
+HP Pavilion 206,131338,Laptop,4.9,Intel i7,12th Gen,16GB,SSD,512GB,NVIDIA GTX 1650,Singer,Polonnaruwa
+TCL Android TV 207,463816,Television,3.6,Smart Processor,Latest,3GB,Flash,32 inch,Integrated,Abans,Kandy
+Samsung Galaxy S21 208,197087,Smartphone,4.9,Dimensity 900,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Jaffna
+LG OLED TV 209,363783,Television,3.9,Smart Processor,Latest,3GB,eMMC,32 inch,Integrated,Softlogic,Kalutara
+Asus VivoBook 210,482237,Laptop,4.6,Intel i5,10th Gen,32GB,SSD,512GB,RTX 3050,Redline,Matara
+HP Pavilion 211,243670,Laptop,4.1,Intel i7,11th Gen,8GB,SSD,1TB,Integrated,Singer,Matara
+Realme GT 212,53079,Smartphone,3.8,Dimensity 900,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Abans,Kandy
+Acer Aspire 213,205822,Laptop,4.5,Intel i5,11th Gen,8GB,SSD,256GB,RTX 3060,Redline,Batticaloa
+iPhone 13 214,167024,Smartphone,4.8,Snapdragon 8 Gen 2,Latest,6GB,Flash,64GB,Adreno/Mali/Apple GPU,Singer,Badulla
+Sony Bravia 215,539850,Television,4.4,Smart Processor,Latest,1GB,eMMC,43 inch,Integrated,Singer,Matara
+Samsung Galaxy S21 216,298664,Smartphone,4.8,Snapdragon 680,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Singer,Polonnaruwa
+Lenovo IdeaPad 217,300380,Laptop,4.8,Intel i3,13th Gen,16GB,SSD,1TB,RTX 3060,Singer,Kurunegala
+Acer Aspire 218,384673,Laptop,3.9,Intel i7,12th Gen,32GB,SSD,1TB,RTX 3050,Singer,Matale
+Hisense UHD TV 219,401304,Television,4.1,Smart Processor,Latest,2GB,Flash,32 inch,Integrated,Softlogic,Batticaloa
+Dell Inspiron 220,442484,Laptop,4.8,Intel i5,12th Gen,32GB,SSD,512GB,RTX 3050,Redline,Kandy
+iPhone 13 221,71495,Smartphone,3.7,Dimensity 900,Latest,6GB,Flash,64GB,Adreno/Mali/Apple GPU,Redline,Matara
+Asus VivoBook 222,223081,Laptop,4.5,Intel i5,12th Gen,32GB,SSD,1TB,NVIDIA GTX 1650,Softlogic,Trincomalee
+OnePlus 11 223,282802,Smartphone,4.7,Snapdragon 8 Gen 2,Latest,12GB,Flash,128GB,Adreno/Mali/Apple GPU,Futureworld,Kurunegala
+Xiaomi Redmi Note 12 224,135679,Smartphone,3.6,Dimensity 900,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Badulla
+Lenovo IdeaPad 225,138222,Laptop,4.6,Intel i7,12th Gen,32GB,SSD,256GB,RTX 3060,Softlogic,Kandy
+Lenovo IdeaPad 226,381000,Laptop,4.1,AMD Ryzen 5,13th Gen,16GB,SSD,1TB,Integrated,Redline,Anuradhapura
+Samsung Galaxy S21 227,210935,Smartphone,3.8,Apple A15,Latest,6GB,Flash,256GB,Adreno/Mali/Apple GPU,Softlogic,Kalutara
+Lenovo IdeaPad 228,224504,Laptop,4.8,AMD Ryzen 7,12th Gen,16GB,SSD,512GB,RTX 3060,Redline,Colombo
+TCL Android TV 229,236037,Television,4.5,Smart Processor,Latest,4GB,eMMC,32 inch,Integrated,Futureworld,Badulla
+HP Pavilion 230,392549,Laptop,4.4,AMD Ryzen 5,11th Gen,8GB,SSD,1TB,NVIDIA GTX 1650,Abans,Matale
+Acer Aspire 231,161479,Laptop,4.6,AMD Ryzen 7,10th Gen,32GB,SSD,256GB,NVIDIA GTX 1650,Abans,Batticaloa
+Realme GT 232,232770,Smartphone,4.8,Dimensity 900,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Softlogic,Ratnapura
+Realme GT 233,75031,Smartphone,4.6,Dimensity 900,Latest,8GB,Flash,512GB,Adreno/Mali/Apple GPU,Singer,Galle
+Asus VivoBook 234,128775,Laptop,3.6,Intel i7,13th Gen,8GB,SSD,256GB,NVIDIA GTX 1650,Futureworld,Matara
+iPhone 13 235,160557,Smartphone,4.8,Apple A15,Latest,4GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Jaffna
+Xiaomi Redmi Note 12 236,123347,Smartphone,4.1,Snapdragon 8 Gen 2,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Redline,Trincomalee
+Realme GT 237,71028,Smartphone,4.7,Snapdragon 8 Gen 2,Latest,6GB,Flash,128GB,Adreno/Mali/Apple GPU,Abans,Galle
+Asus VivoBook 238,229330,Laptop,3.5,Intel i3,11th Gen,32GB,SSD,256GB,RTX 3060,Abans,Badulla
+Dell Inspiron 239,231286,Laptop,4.8,Intel i7,13th Gen,8GB,SSD,512GB,NVIDIA GTX 1650,Singer,Colombo
+Samsung Smart TV 240,169415,Television,4.1,Smart Processor,Latest,1GB,Flash,55 inch,Integrated,Softlogic,Kalutara
+Samsung Smart TV 241,100457,Television,3.6,Smart Processor,Latest,4GB,eMMC,32 inch,Integrated,Abans,Kalutara
+LG OLED TV 242,130225,Television,4.0,Smart Processor,Latest,1GB,eMMC,55 inch,Integrated,Futureworld,Anuradhapura
+Acer Aspire 243,386698,Laptop,4.4,AMD Ryzen 5,11th Gen,16GB,SSD,256GB,RTX 3060,Redline,Matara
+Samsung Smart TV 244,389339,Television,4.5,Smart Processor,Latest,2GB,eMMC,43 inch,Integrated,Futureworld,Colombo
+Hisense UHD TV 245,395162,Television,3.6,Smart Processor,Latest,4GB,Flash,55 inch,Integrated,Abans,Negombo
+Asus VivoBook 246,181955,Laptop,4.2,AMD Ryzen 7,11th Gen,16GB,SSD,1TB,RTX 3060,Futureworld,Ratnapura
+Xiaomi Redmi Note 12 247,139438,Smartphone,3.8,Dimensity 900,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Softlogic,Polonnaruwa
+Realme GT 248,242636,Smartphone,4.7,Apple A15,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Singer,Negombo
+Dell Inspiron 249,388835,Laptop,4.4,Intel i3,10th Gen,32GB,SSD,1TB,RTX 3050,Futureworld,Anuradhapura
+Realme GT 250,73675,Smartphone,4.3,Apple A15,Latest,6GB,Flash,128GB,Adreno/Mali/Apple GPU,Singer,Kandy
+Realme GT 251,99340,Smartphone,4.4,Dimensity 900,Latest,4GB,Flash,64GB,Adreno/Mali/Apple GPU,Singer,Polonnaruwa
+HP Pavilion 252,284217,Laptop,4.7,Intel i5,10th Gen,32GB,SSD,1TB,RTX 3060,Redline,Trincomalee
+Samsung Galaxy S21 253,143054,Smartphone,3.9,Apple A15,Latest,8GB,Flash,256GB,Adreno/Mali/Apple GPU,Futureworld,Polonnaruwa
+Asus VivoBook 254,399794,Laptop,4.3,AMD Ryzen 5,13th Gen,32GB,SSD,1TB,Integrated,Futureworld,Ratnapura
+LG OLED TV 255,575971,Television,3.9,Smart Processor,Latest,3GB,Flash,65 inch,Integrated,Redline,Trincomalee
+Samsung Smart TV 256,234835,Television,4.2,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Softlogic,Kalutara
+TCL Android TV 257,570778,Television,4.8,Smart Processor,Latest,1GB,eMMC,65 inch,Integrated,Futureworld,Kurunegala
+Acer Aspire 258,436444,Laptop,4.5,Intel i5,10th Gen,32GB,SSD,1TB,Integrated,Futureworld,Negombo
+Acer Aspire 259,275820,Laptop,4.3,Intel i3,13th Gen,8GB,SSD,1TB,NVIDIA GTX 1650,Abans,Polonnaruwa
+Hisense UHD TV 260,137002,Television,4.6,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Abans,Kandy
+HP Pavilion 261,376238,Laptop,3.6,Intel i7,10th Gen,32GB,SSD,1TB,RTX 3060,Singer,Matale
+Dell Inspiron 262,218327,Laptop,4.7,Intel i3,11th Gen,32GB,SSD,256GB,RTX 3050,Futureworld,Negombo
+HP Pavilion 263,380076,Laptop,3.9,AMD Ryzen 5,12th Gen,16GB,SSD,1TB,RTX 3060,Softlogic,Matale
+Realme GT 264,224879,Smartphone,4.5,Snapdragon 8 Gen 2,Latest,8GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Jaffna
+Samsung Smart TV 265,101747,Television,4.7,Smart Processor,Latest,2GB,eMMC,43 inch,Integrated,Singer,Anuradhapura
+OnePlus 11 266,151661,Smartphone,4.0,Snapdragon 8 Gen 2,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Redline,Galle
+iPhone 13 267,169959,Smartphone,4.9,Snapdragon 8 Gen 2,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Kalutara
+Sony Bravia 268,387380,Television,4.8,Smart Processor,Latest,1GB,eMMC,43 inch,Integrated,Abans,Colombo
+Samsung Galaxy S21 269,109843,Smartphone,3.7,Apple A15,Latest,12GB,Flash,128GB,Adreno/Mali/Apple GPU,Singer,Colombo
+OnePlus 11 270,200091,Smartphone,4.5,Dimensity 900,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Trincomalee
+Realme GT 271,103319,Smartphone,3.9,Snapdragon 8 Gen 2,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Ratnapura
+LG OLED TV 272,154642,Television,4.6,Smart Processor,Latest,2GB,eMMC,43 inch,Integrated,Futureworld,Galle
+Realme GT 273,179928,Smartphone,4.2,Snapdragon 680,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Futureworld,Trincomalee
+Realme GT 274,184382,Smartphone,4.0,Snapdragon 8 Gen 2,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Matara
+LG OLED TV 275,265410,Television,4.6,Smart Processor,Latest,1GB,eMMC,65 inch,Integrated,Abans,Kalutara
+OnePlus 11 276,279982,Smartphone,4.1,Dimensity 900,Latest,12GB,Flash,128GB,Adreno/Mali/Apple GPU,Softlogic,Trincomalee
+Xiaomi Redmi Note 12 277,55327,Smartphone,4.2,Dimensity 900,Latest,8GB,Flash,64GB,Adreno/Mali/Apple GPU,Redline,Trincomalee
+Hisense UHD TV 278,143504,Television,4.9,Smart Processor,Latest,3GB,eMMC,43 inch,Integrated,Redline,Ratnapura
+Samsung Smart TV 279,99719,Television,3.9,Smart Processor,Latest,2GB,eMMC,32 inch,Integrated,Softlogic,Anuradhapura
+Samsung Smart TV 280,242037,Television,4.6,Smart Processor,Latest,3GB,eMMC,65 inch,Integrated,Singer,Anuradhapura
+Acer Aspire 281,469178,Laptop,4.4,Intel i7,10th Gen,16GB,SSD,1TB,RTX 3060,Futureworld,Matale
+HP Pavilion 282,441215,Laptop,3.8,Intel i5,10th Gen,32GB,SSD,256GB,Integrated,Redline,Kandy
+LG OLED TV 283,270376,Television,4.7,Smart Processor,Latest,4GB,eMMC,65 inch,Integrated,Futureworld,Kandy
+Samsung Galaxy S21 284,272358,Smartphone,4.8,Apple A15,Latest,12GB,Flash,128GB,Adreno/Mali/Apple GPU,Abans,Matale
+Asus VivoBook 285,195788,Laptop,4.1,Intel i7,12th Gen,16GB,SSD,1TB,Integrated,Singer,Polonnaruwa
+LG OLED TV 286,178556,Television,3.6,Smart Processor,Latest,1GB,eMMC,43 inch,Integrated,Futureworld,Anuradhapura
+Sony Bravia 287,347653,Television,3.7,Smart Processor,Latest,2GB,Flash,55 inch,Integrated,Softlogic,Ratnapura
+Acer Aspire 288,260268,Laptop,4.2,Intel i3,13th Gen,8GB,SSD,512GB,RTX 3060,Singer,Kurunegala
+Asus VivoBook 289,274335,Laptop,4.9,Intel i3,10th Gen,16GB,SSD,256GB,RTX 3060,Singer,Ratnapura
+Acer Aspire 290,409927,Laptop,4.6,Intel i5,12th Gen,32GB,SSD,1TB,NVIDIA GTX 1650,Futureworld,Jaffna
+iPhone 13 291,225414,Smartphone,4.2,Apple A15,Latest,8GB,Flash,64GB,Adreno/Mali/Apple GPU,Softlogic,Kandy
+TCL Android TV 292,533191,Television,4.4,Smart Processor,Latest,1GB,eMMC,32 inch,Integrated,Redline,Trincomalee
+Xiaomi Redmi Note 12 293,272103,Smartphone,4.0,Dimensity 900,Latest,8GB,Flash,512GB,Adreno/Mali/Apple GPU,Softlogic,Galle
+Hisense UHD TV 294,295834,Television,4.7,Smart Processor,Latest,3GB,Flash,65 inch,Integrated,Singer,Negombo
+TCL Android TV 295,90397,Television,3.9,Smart Processor,Latest,1GB,Flash,55 inch,Integrated,Singer,Negombo
+Sony Bravia 296,479324,Television,3.8,Smart Processor,Latest,1GB,Flash,55 inch,Integrated,Redline,Polonnaruwa
+Asus VivoBook 297,149072,Laptop,3.7,AMD Ryzen 7,13th Gen,8GB,SSD,256GB,Integrated,Redline,Batticaloa
+Dell Inspiron 298,285749,Laptop,4.2,AMD Ryzen 5,13th Gen,8GB,SSD,1TB,NVIDIA GTX 1650,Futureworld,Batticaloa
+TCL Android TV 299,567068,Television,3.6,Smart Processor,Latest,4GB,Flash,65 inch,Integrated,Futureworld,Kandy
+LG OLED TV 300,553774,Television,4.0,Smart Processor,Latest,2GB,eMMC,32 inch,Integrated,Futureworld,Polonnaruwa
+Xiaomi Redmi Note 12 301,199563,Smartphone,4.2,Dimensity 900,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Galle
+LG OLED TV 302,507763,Television,4.7,Smart Processor,Latest,2GB,Flash,55 inch,Integrated,Futureworld,Badulla
+HP Pavilion 303,322437,Laptop,4.8,Intel i3,13th Gen,32GB,SSD,1TB,Integrated,Redline,Badulla
+Acer Aspire 304,228351,Laptop,3.5,AMD Ryzen 7,11th Gen,8GB,SSD,256GB,RTX 3050,Redline,Negombo
+Samsung Smart TV 305,195865,Television,3.9,Smart Processor,Latest,4GB,eMMC,32 inch,Integrated,Abans,Galle
+OnePlus 11 306,263199,Smartphone,3.7,Snapdragon 680,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Kalutara
+Sony Bravia 307,588608,Television,3.5,Smart Processor,Latest,4GB,eMMC,55 inch,Integrated,Softlogic,Kalutara
+Realme GT 308,75939,Smartphone,3.7,Dimensity 900,Latest,4GB,Flash,512GB,Adreno/Mali/Apple GPU,Softlogic,Kurunegala
+Hisense UHD TV 309,395266,Television,4.8,Smart Processor,Latest,1GB,Flash,32 inch,Integrated,Singer,Badulla
+iPhone 13 310,251985,Smartphone,4.1,Snapdragon 8 Gen 2,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Softlogic,Kalutara
+Dell Inspiron 311,177913,Laptop,4.4,AMD Ryzen 7,11th Gen,32GB,SSD,1TB,NVIDIA GTX 1650,Redline,Badulla
+Lenovo IdeaPad 312,380411,Laptop,3.9,Intel i7,12th Gen,32GB,SSD,512GB,NVIDIA GTX 1650,Abans,Galle
+HP Pavilion 313,134051,Laptop,4.3,Intel i7,12th Gen,16GB,SSD,1TB,RTX 3050,Redline,Jaffna
+Asus VivoBook 314,426998,Laptop,3.7,AMD Ryzen 5,12th Gen,32GB,SSD,256GB,NVIDIA GTX 1650,Futureworld,Jaffna
+TCL Android TV 315,539106,Television,4.5,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Softlogic,Colombo
+Dell Inspiron 316,134395,Laptop,4.8,AMD Ryzen 5,13th Gen,16GB,SSD,512GB,RTX 3050,Redline,Galle
+Hisense UHD TV 317,465244,Television,4.5,Smart Processor,Latest,4GB,Flash,65 inch,Integrated,Redline,Colombo
+Xiaomi Redmi Note 12 318,265536,Smartphone,4.1,Snapdragon 8 Gen 2,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Abans,Ratnapura
+LG OLED TV 319,450835,Television,4.3,Smart Processor,Latest,3GB,eMMC,55 inch,Integrated,Futureworld,Negombo
+iPhone 13 320,187493,Smartphone,4.0,Snapdragon 8 Gen 2,Latest,4GB,Flash,128GB,Adreno/Mali/Apple GPU,Singer,Kalutara
+Acer Aspire 321,359109,Laptop,3.9,Intel i7,10th Gen,8GB,SSD,1TB,RTX 3060,Redline,Anuradhapura
+Acer Aspire 322,189551,Laptop,3.7,Intel i3,10th Gen,32GB,SSD,1TB,Integrated,Abans,Anuradhapura
+Hisense UHD TV 323,477946,Television,4.3,Smart Processor,Latest,1GB,eMMC,32 inch,Integrated,Futureworld,Jaffna
+Hisense UHD TV 324,371306,Television,4.3,Smart Processor,Latest,1GB,Flash,65 inch,Integrated,Singer,Batticaloa
+Realme GT 325,264116,Smartphone,4.5,Snapdragon 8 Gen 2,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Futureworld,Matale
+TCL Android TV 326,368188,Television,4.1,Smart Processor,Latest,3GB,eMMC,43 inch,Integrated,Redline,Kandy
+Hisense UHD TV 327,352084,Television,3.7,Smart Processor,Latest,4GB,eMMC,55 inch,Integrated,Abans,Jaffna
+TCL Android TV 328,349688,Television,4.3,Smart Processor,Latest,2GB,Flash,65 inch,Integrated,Abans,Kurunegala
+Dell Inspiron 329,188757,Laptop,4.9,Intel i3,11th Gen,16GB,SSD,256GB,NVIDIA GTX 1650,Softlogic,Matale
+OnePlus 11 330,196448,Smartphone,3.6,Snapdragon 680,Latest,6GB,Flash,64GB,Adreno/Mali/Apple GPU,Softlogic,Polonnaruwa
+Hisense UHD TV 331,467469,Television,4.4,Smart Processor,Latest,2GB,eMMC,65 inch,Integrated,Futureworld,Colombo
+TCL Android TV 332,297287,Television,4.6,Smart Processor,Latest,2GB,eMMC,65 inch,Integrated,Redline,Negombo
+Samsung Smart TV 333,396051,Television,3.5,Smart Processor,Latest,1GB,Flash,43 inch,Integrated,Futureworld,Galle
+iPhone 13 334,221066,Smartphone,3.9,Snapdragon 680,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Singer,Ratnapura
+Acer Aspire 335,360547,Laptop,4.0,AMD Ryzen 7,11th Gen,8GB,SSD,1TB,RTX 3060,Abans,Badulla
+Xiaomi Redmi Note 12 336,63338,Smartphone,3.5,Snapdragon 8 Gen 2,Latest,6GB,Flash,64GB,Adreno/Mali/Apple GPU,Redline,Trincomalee
+Asus VivoBook 337,272196,Laptop,4.4,Intel i5,13th Gen,16GB,SSD,1TB,Integrated,Futureworld,Trincomalee
+Asus VivoBook 338,388230,Laptop,3.9,Intel i7,13th Gen,32GB,SSD,1TB,RTX 3060,Abans,Kalutara
+Dell Inspiron 339,326645,Laptop,4.6,Intel i7,11th Gen,16GB,SSD,512GB,Integrated,Abans,Badulla
+Realme GT 340,64094,Smartphone,4.1,Dimensity 900,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Abans,Matara
+Hisense UHD TV 341,377812,Television,3.9,Smart Processor,Latest,4GB,Flash,43 inch,Integrated,Futureworld,Jaffna
+LG OLED TV 342,331440,Television,4.4,Smart Processor,Latest,4GB,eMMC,43 inch,Integrated,Redline,Jaffna
+LG OLED TV 343,428417,Television,4.5,Smart Processor,Latest,3GB,Flash,43 inch,Integrated,Abans,Matara
+OnePlus 11 344,93655,Smartphone,4.1,Dimensity 900,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Abans,Kalutara
+Hisense UHD TV 345,530869,Television,4.4,Smart Processor,Latest,1GB,eMMC,55 inch,Integrated,Abans,Polonnaruwa
+iPhone 13 346,245330,Smartphone,4.6,Snapdragon 8 Gen 2,Latest,4GB,Flash,128GB,Adreno/Mali/Apple GPU,Softlogic,Anuradhapura
+Realme GT 347,151292,Smartphone,3.9,Snapdragon 680,Latest,6GB,Flash,128GB,Adreno/Mali/Apple GPU,Redline,Polonnaruwa
+Samsung Smart TV 348,144537,Television,4.0,Smart Processor,Latest,1GB,Flash,55 inch,Integrated,Redline,Kurunegala
+TCL Android TV 349,506167,Television,4.0,Smart Processor,Latest,3GB,eMMC,32 inch,Integrated,Futureworld,Kalutara
+LG OLED TV 350,478788,Television,4.6,Smart Processor,Latest,2GB,Flash,55 inch,Integrated,Abans,Negombo
+Xiaomi Redmi Note 12 351,267194,Smartphone,3.5,Snapdragon 680,Latest,6GB,Flash,64GB,Adreno/Mali/Apple GPU,Abans,Galle
+TCL Android TV 352,491869,Television,4.5,Smart Processor,Latest,1GB,Flash,55 inch,Integrated,Singer,Galle
+Xiaomi Redmi Note 12 353,180008,Smartphone,4.8,Dimensity 900,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Redline,Galle
+LG OLED TV 354,492452,Television,3.6,Smart Processor,Latest,4GB,Flash,55 inch,Integrated,Singer,Matara
+Samsung Smart TV 355,141857,Television,4.7,Smart Processor,Latest,3GB,Flash,55 inch,Integrated,Futureworld,Matale
+iPhone 13 356,113469,Smartphone,4.4,Snapdragon 8 Gen 2,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Softlogic,Jaffna
+Samsung Galaxy S21 357,200042,Smartphone,4.8,Snapdragon 680,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Futureworld,Negombo
+Dell Inspiron 358,444138,Laptop,4.5,AMD Ryzen 7,11th Gen,16GB,SSD,256GB,RTX 3050,Futureworld,Badulla
+LG OLED TV 359,207706,Television,4.0,Smart Processor,Latest,2GB,eMMC,32 inch,Integrated,Abans,Batticaloa
+Samsung Galaxy S21 360,273013,Smartphone,4.1,Snapdragon 680,Latest,4GB,Flash,512GB,Adreno/Mali/Apple GPU,Futureworld,Matale
+Samsung Galaxy S21 361,221910,Smartphone,4.3,Snapdragon 680,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Futureworld,Matara
+Lenovo IdeaPad 362,161748,Laptop,4.7,Intel i5,13th Gen,8GB,SSD,1TB,RTX 3050,Redline,Kalutara
+Asus VivoBook 363,276906,Laptop,4.8,Intel i5,11th Gen,8GB,SSD,256GB,RTX 3050,Abans,Jaffna
+Xiaomi Redmi Note 12 364,287918,Smartphone,3.8,Apple A15,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Futureworld,Batticaloa
+Sony Bravia 365,237118,Television,4.0,Smart Processor,Latest,2GB,eMMC,65 inch,Integrated,Abans,Kalutara
+Realme GT 366,101066,Smartphone,4.9,Snapdragon 680,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Futureworld,Colombo
+Acer Aspire 367,251560,Laptop,4.3,Intel i5,10th Gen,8GB,SSD,1TB,RTX 3060,Softlogic,Anuradhapura
+iPhone 13 368,127119,Smartphone,4.3,Apple A15,Latest,4GB,Flash,512GB,Adreno/Mali/Apple GPU,Futureworld,Kalutara
+Acer Aspire 369,139075,Laptop,3.9,AMD Ryzen 7,10th Gen,8GB,SSD,512GB,NVIDIA GTX 1650,Redline,Badulla
+HP Pavilion 370,409165,Laptop,3.6,AMD Ryzen 7,10th Gen,16GB,SSD,1TB,RTX 3060,Redline,Kurunegala
+OnePlus 11 371,131443,Smartphone,4.5,Snapdragon 680,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Batticaloa
+TCL Android TV 372,376289,Television,4.0,Smart Processor,Latest,2GB,Flash,55 inch,Integrated,Softlogic,Galle
+TCL Android TV 373,338285,Television,4.6,Smart Processor,Latest,1GB,Flash,55 inch,Integrated,Softlogic,Kalutara
+Lenovo IdeaPad 374,154216,Laptop,4.7,Intel i3,11th Gen,8GB,SSD,512GB,Integrated,Singer,Kandy
+Dell Inspiron 375,437659,Laptop,4.5,AMD Ryzen 7,11th Gen,8GB,SSD,1TB,Integrated,Futureworld,Polonnaruwa
+Samsung Galaxy S21 376,233977,Smartphone,4.1,Apple A15,Latest,4GB,Flash,128GB,Adreno/Mali/Apple GPU,Futureworld,Kalutara
+Sony Bravia 377,491749,Television,3.7,Smart Processor,Latest,3GB,Flash,65 inch,Integrated,Singer,Kurunegala
+Dell Inspiron 378,326925,Laptop,4.3,Intel i7,13th Gen,8GB,SSD,256GB,RTX 3060,Futureworld,Batticaloa
+OnePlus 11 379,234702,Smartphone,3.9,Snapdragon 680,Latest,6GB,Flash,64GB,Adreno/Mali/Apple GPU,Redline,Kalutara
+Hisense UHD TV 380,356417,Television,4.4,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Redline,Kurunegala
+Xiaomi Redmi Note 12 381,226069,Smartphone,4.7,Apple A15,Latest,12GB,Flash,128GB,Adreno/Mali/Apple GPU,Softlogic,Negombo
+Hisense UHD TV 382,423636,Television,4.0,Smart Processor,Latest,4GB,Flash,65 inch,Integrated,Softlogic,Ratnapura
+Hisense UHD TV 383,548695,Television,4.3,Smart Processor,Latest,4GB,Flash,43 inch,Integrated,Futureworld,Ratnapura
+OnePlus 11 384,298662,Smartphone,4.6,Snapdragon 680,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Redline,Matara
+Sony Bravia 385,533140,Television,4.8,Smart Processor,Latest,2GB,eMMC,65 inch,Integrated,Futureworld,Ratnapura
+Realme GT 386,250463,Smartphone,3.9,Dimensity 900,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Softlogic,Galle
+Sony Bravia 387,565755,Television,4.6,Smart Processor,Latest,2GB,eMMC,65 inch,Integrated,Singer,Trincomalee
+Lenovo IdeaPad 388,158726,Laptop,4.7,Intel i7,13th Gen,16GB,SSD,256GB,Integrated,Redline,Colombo
+Realme GT 389,276363,Smartphone,4.5,Snapdragon 680,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Abans,Ratnapura
+Hisense UHD TV 390,338173,Television,4.8,Smart Processor,Latest,2GB,eMMC,55 inch,Integrated,Futureworld,Trincomalee
+Xiaomi Redmi Note 12 391,213087,Smartphone,4.0,Snapdragon 680,Latest,6GB,Flash,256GB,Adreno/Mali/Apple GPU,Abans,Trincomalee
+iPhone 13 392,238235,Smartphone,4.2,Snapdragon 680,Latest,6GB,Flash,128GB,Adreno/Mali/Apple GPU,Softlogic,Badulla
+Xiaomi Redmi Note 12 393,138658,Smartphone,4.9,Snapdragon 8 Gen 2,Latest,6GB,Flash,64GB,Adreno/Mali/Apple GPU,Singer,Kandy
+HP Pavilion 394,133085,Laptop,3.9,Intel i5,10th Gen,16GB,SSD,1TB,Integrated,Redline,Negombo
+Dell Inspiron 395,392810,Laptop,4.8,AMD Ryzen 5,11th Gen,16GB,SSD,512GB,RTX 3060,Singer,Trincomalee
+Sony Bravia 396,440177,Television,3.6,Smart Processor,Latest,4GB,eMMC,55 inch,Integrated,Abans,Colombo
+Samsung Galaxy S21 397,196953,Smartphone,4.8,Snapdragon 680,Latest,8GB,Flash,64GB,Adreno/Mali/Apple GPU,Softlogic,Negombo
+Dell Inspiron 398,448450,Laptop,3.9,Intel i5,13th Gen,16GB,SSD,512GB,Integrated,Softlogic,Polonnaruwa
+iPhone 13 399,265522,Smartphone,4.5,Dimensity 900,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Abans,Matara
+iPhone 13 400,279972,Smartphone,3.5,Snapdragon 8 Gen 2,Latest,12GB,Flash,128GB,Adreno/Mali/Apple GPU,Futureworld,Trincomalee
+Lenovo IdeaPad 401,201971,Laptop,4.6,Intel i5,10th Gen,32GB,SSD,256GB,NVIDIA GTX 1650,Singer,Ratnapura
+Realme GT 402,186158,Smartphone,3.5,Snapdragon 8 Gen 2,Latest,8GB,Flash,128GB,Adreno/Mali/Apple GPU,Futureworld,Matara
+iPhone 13 403,177751,Smartphone,4.0,Dimensity 900,Latest,12GB,Flash,512GB,Adreno/Mali/Apple GPU,Abans,Anuradhapura
+Sony Bravia 404,391928,Television,3.7,Smart Processor,Latest,1GB,eMMC,32 inch,Integrated,Abans,Polonnaruwa
+Samsung Galaxy S21 405,106195,Smartphone,3.9,Snapdragon 8 Gen 2,Latest,8GB,Flash,256GB,Adreno/Mali/Apple GPU,Futureworld,Anuradhapura
+Samsung Galaxy S21 406,271572,Smartphone,4.4,Snapdragon 8 Gen 2,Latest,6GB,Flash,128GB,Adreno/Mali/Apple GPU,Futureworld,Kurunegala
+Hisense UHD TV 407,529958,Television,4.0,Smart Processor,Latest,4GB,Flash,65 inch,Integrated,Abans,Kandy
+Realme GT 408,125267,Smartphone,4.5,Snapdragon 680,Latest,8GB,Flash,512GB,Adreno/Mali/Apple GPU,Abans,Matale
+TCL Android TV 409,406053,Television,4.5,Smart Processor,Latest,1GB,Flash,32 inch,Integrated,Abans,Kandy
+LG OLED TV 410,244789,Television,3.9,Smart Processor,Latest,3GB,eMMC,65 inch,Integrated,Futureworld,Negombo
+Dell Inspiron 411,158345,Laptop,4.1,Intel i5,12th Gen,8GB,SSD,1TB,RTX 3050,Singer,Batticaloa
+Acer Aspire 412,163832,Laptop,4.0,AMD Ryzen 5,11th Gen,8GB,SSD,512GB,Integrated,Softlogic,Badulla
+Realme GT 413,105967,Smartphone,3.6,Apple A15,Latest,6GB,Flash,128GB,Adreno/Mali/Apple GPU,Softlogic,Badulla
+Acer Aspire 414,184164,Laptop,4.7,Intel i3,11th Gen,32GB,SSD,1TB,NVIDIA GTX 1650,Softlogic,Matara
+Samsung Smart TV 415,373869,Television,4.8,Smart Processor,Latest,3GB,Flash,43 inch,Integrated,Futureworld,Badulla
+Xiaomi Redmi Note 12 416,133228,Smartphone,4.5,Snapdragon 8 Gen 2,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Futureworld,Polonnaruwa
+Sony Bravia 417,279943,Television,4.3,Smart Processor,Latest,4GB,Flash,43 inch,Integrated,Futureworld,Ratnapura
+Hisense UHD TV 418,421772,Television,4.7,Smart Processor,Latest,4GB,eMMC,65 inch,Integrated,Softlogic,Batticaloa
+OnePlus 11 419,232019,Smartphone,4.9,Snapdragon 8 Gen 2,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Abans,Polonnaruwa
+Lenovo IdeaPad 420,164473,Laptop,4.3,AMD Ryzen 5,11th Gen,8GB,SSD,256GB,Integrated,Singer,Ratnapura
+Lenovo IdeaPad 421,333650,Laptop,4.1,Intel i5,12th Gen,32GB,SSD,256GB,Integrated,Softlogic,Negombo
+Hisense UHD TV 422,542726,Television,4.5,Smart Processor,Latest,2GB,Flash,43 inch,Integrated,Futureworld,Colombo
+LG OLED TV 423,372945,Television,3.8,Smart Processor,Latest,1GB,Flash,65 inch,Integrated,Softlogic,Polonnaruwa
+Hisense UHD TV 424,256402,Television,4.4,Smart Processor,Latest,2GB,Flash,55 inch,Integrated,Softlogic,Ratnapura
+Lenovo IdeaPad 425,339793,Laptop,3.8,Intel i5,12th Gen,32GB,SSD,1TB,NVIDIA GTX 1650,Softlogic,Colombo
+OnePlus 11 426,57270,Smartphone,3.6,Apple A15,Latest,4GB,Flash,512GB,Adreno/Mali/Apple GPU,Futureworld,Kalutara
+Sony Bravia 427,253214,Television,4.5,Smart Processor,Latest,4GB,eMMC,43 inch,Integrated,Redline,Kandy
+Acer Aspire 428,257454,Laptop,4.3,Intel i7,11th Gen,32GB,SSD,512GB,RTX 3050,Redline,Jaffna
+TCL Android TV 429,480941,Television,4.1,Smart Processor,Latest,3GB,eMMC,55 inch,Integrated,Abans,Matale
+Sony Bravia 430,528763,Television,3.9,Smart Processor,Latest,1GB,eMMC,43 inch,Integrated,Softlogic,Jaffna
+Acer Aspire 431,138027,Laptop,4.2,Intel i5,10th Gen,8GB,SSD,1TB,NVIDIA GTX 1650,Singer,Matara
+Acer Aspire 432,227941,Laptop,4.3,Intel i3,11th Gen,32GB,SSD,512GB,NVIDIA GTX 1650,Redline,Trincomalee
+TCL Android TV 433,159361,Television,4.5,Smart Processor,Latest,4GB,eMMC,65 inch,Integrated,Redline,Ratnapura
+Xiaomi Redmi Note 12 434,218626,Smartphone,4.5,Snapdragon 680,Latest,8GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Jaffna
+Lenovo IdeaPad 435,304820,Laptop,4.3,AMD Ryzen 7,10th Gen,16GB,SSD,256GB,RTX 3050,Softlogic,Trincomalee
+TCL Android TV 436,198353,Television,4.0,Smart Processor,Latest,4GB,Flash,55 inch,Integrated,Softlogic,Batticaloa
+iPhone 13 437,170699,Smartphone,3.7,Dimensity 900,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Futureworld,Colombo
+Dell Inspiron 438,382230,Laptop,4.2,AMD Ryzen 5,12th Gen,8GB,SSD,1TB,Integrated,Abans,Kandy
+Xiaomi Redmi Note 12 439,214509,Smartphone,4.0,Dimensity 900,Latest,8GB,Flash,256GB,Adreno/Mali/Apple GPU,Softlogic,Kurunegala
+Asus VivoBook 440,270364,Laptop,4.6,Intel i3,10th Gen,32GB,SSD,512GB,NVIDIA GTX 1650,Futureworld,Kandy
+Dell Inspiron 441,442124,Laptop,4.7,Intel i7,13th Gen,16GB,SSD,256GB,RTX 3050,Redline,Colombo
+OnePlus 11 442,287905,Smartphone,4.6,Snapdragon 680,Latest,6GB,Flash,256GB,Adreno/Mali/Apple GPU,Redline,Ratnapura
+HP Pavilion 443,157039,Laptop,4.4,Intel i7,13th Gen,8GB,SSD,512GB,Integrated,Futureworld,Kalutara
+HP Pavilion 444,358627,Laptop,3.9,Intel i3,11th Gen,16GB,SSD,256GB,RTX 3060,Redline,Batticaloa
+Acer Aspire 445,351357,Laptop,4.7,AMD Ryzen 7,11th Gen,32GB,SSD,512GB,NVIDIA GTX 1650,Redline,Badulla
+LG OLED TV 446,135136,Television,3.7,Smart Processor,Latest,4GB,eMMC,43 inch,Integrated,Futureworld,Anuradhapura
+Hisense UHD TV 447,122376,Television,3.7,Smart Processor,Latest,3GB,Flash,65 inch,Integrated,Redline,Matara
+Samsung Smart TV 448,299713,Television,4.6,Smart Processor,Latest,3GB,eMMC,43 inch,Integrated,Redline,Anuradhapura
+Samsung Smart TV 449,145419,Television,4.2,Smart Processor,Latest,4GB,eMMC,32 inch,Integrated,Futureworld,Negombo
+OnePlus 11 450,74898,Smartphone,4.5,Apple A15,Latest,12GB,Flash,64GB,Adreno/Mali/Apple GPU,Abans,Ratnapura
+Xiaomi Redmi Note 12 451,295320,Smartphone,4.6,Apple A15,Latest,8GB,Flash,256GB,Adreno/Mali/Apple GPU,Redline,Trincomalee
+Hisense UHD TV 452,289574,Television,4.5,Smart Processor,Latest,4GB,Flash,65 inch,Integrated,Redline,Kurunegala
+Sony Bravia 453,189153,Television,4.3,Smart Processor,Latest,1GB,eMMC,43 inch,Integrated,Futureworld,Matara
+Xiaomi Redmi Note 12 454,193421,Smartphone,4.6,Apple A15,Latest,6GB,Flash,512GB,Adreno/Mali/Apple GPU,Softlogic,Galle
+Samsung Smart TV 455,524466,Television,4.6,Smart Processor,Latest,2GB,Flash,65 inch,Integrated,Futureworld,Matara
+Asus VivoBook 456,121846,Laptop,4.8,Intel i5,13th Gen,16GB,SSD,1TB,NVIDIA GTX 1650,Softlogic,Polonnaruwa
+Realme GT 457,206098,Smartphone,4.5,Snapdragon 8 Gen 2,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Redline,Kalutara
+Lenovo IdeaPad 458,188918,Laptop,3.8,AMD Ryzen 5,12th Gen,16GB,SSD,256GB,RTX 3050,Futureworld,Trincomalee
+Sony Bravia 459,235507,Television,4.3,Smart Processor,Latest,3GB,Flash,32 inch,Integrated,Singer,Badulla
+Lenovo IdeaPad 460,293279,Laptop,4.4,Intel i5,13th Gen,16GB,SSD,1TB,NVIDIA GTX 1650,Singer,Anuradhapura
+Xiaomi Redmi Note 12 461,103482,Smartphone,4.1,Snapdragon 680,Latest,6GB,Flash,64GB,Adreno/Mali/Apple GPU,Redline,Kandy
+LG OLED TV 462,515855,Television,4.5,Smart Processor,Latest,2GB,eMMC,32 inch,Integrated,Futureworld,Galle
+Lenovo IdeaPad 463,288359,Laptop,4.7,Intel i5,10th Gen,16GB,SSD,1TB,RTX 3060,Softlogic,Matale
+Lenovo IdeaPad 464,473810,Laptop,4.1,AMD Ryzen 5,10th Gen,8GB,SSD,256GB,NVIDIA GTX 1650,Redline,Batticaloa
+Samsung Smart TV 465,413418,Television,3.5,Smart Processor,Latest,3GB,Flash,43 inch,Integrated,Futureworld,Matale
+TCL Android TV 466,331476,Television,3.8,Smart Processor,Latest,1GB,Flash,65 inch,Integrated,Softlogic,Kurunegala
+Samsung Smart TV 467,442718,Television,3.7,Smart Processor,Latest,1GB,Flash,43 inch,Integrated,Singer,Anuradhapura
+Asus VivoBook 468,145155,Laptop,4.1,AMD Ryzen 5,13th Gen,8GB,SSD,512GB,RTX 3060,Futureworld,Ratnapura
+Xiaomi Redmi Note 12 469,282798,Smartphone,4.4,Snapdragon 8 Gen 2,Latest,12GB,Flash,256GB,Adreno/Mali/Apple GPU,Softlogic,Kandy
+Realme GT 470,99690,Smartphone,4.6,Snapdragon 8 Gen 2,Latest,4GB,Flash,64GB,Adreno/Mali/Apple GPU,Futureworld,Polonnaruwa
+Lenovo IdeaPad 471,154460,Laptop,4.0,Intel i5,12th Gen,8GB,SSD,256GB,NVIDIA GTX 1650,Futureworld,Negombo
+Samsung Smart TV 472,593125,Television,3.6,Smart Processor,Latest,4GB,eMMC,55 inch,Integrated,Softlogic,Colombo
+Hisense UHD TV 473,215291,Television,4.0,Smart Processor,Latest,2GB,eMMC,43 inch,Integrated,Abans,Badulla
+Asus VivoBook 474,331535,Laptop,3.7,AMD Ryzen 7,10th Gen,32GB,SSD,1TB,RTX 3060,Futureworld,Colombo
+iPhone 13 475,97280,Smartphone,4.4,Snapdragon 680,Latest,4GB,Flash,512GB,Adreno/Mali/Apple GPU,Singer,Colombo
+HP Pavilion 476,319430,Laptop,4.8,Intel i5,13th Gen,16GB,SSD,1TB,RTX 3060,Softlogic,Ratnapura
+Xiaomi Redmi Note 12 477,94030,Smartphone,3.5,Dimensity 900,Latest,4GB,Flash,256GB,Adreno/Mali/Apple GPU,Softlogic,Matale
+iPhone 13 478,299089,Smartphone,4.9,Dimensity 900,Latest,6GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Polonnaruwa
+LG OLED TV 479,242947,Television,4.9,Smart Processor,Latest,4GB,eMMC,55 inch,Integrated,Futureworld,Badulla
+Hisense UHD TV 480,135949,Television,3.6,Smart Processor,Latest,2GB,Flash,65 inch,Integrated,Softlogic,Badulla
+Samsung Galaxy S21 481,89506,Smartphone,4.8,Snapdragon 8 Gen 2,Latest,8GB,Flash,256GB,Adreno/Mali/Apple GPU,Singer,Colombo
+Acer Aspire 482,132781,Laptop,3.9,Intel i5,11th Gen,32GB,SSD,256GB,Integrated,Futureworld,Polonnaruwa
+Xiaomi Redmi Note 12 483,246103,Smartphone,4.2,Dimensity 900,Latest,4GB,Flash,128GB,Adreno/Mali/Apple GPU,Softlogic,Colombo
+Lenovo IdeaPad 484,401612,Laptop,4.0,AMD Ryzen 5,10th Gen,8GB,SSD,1TB,Integrated,Redline,Colombo
+Lenovo IdeaPad 485,153984,Laptop,3.8,Intel i7,12th Gen,32GB,SSD,1TB,RTX 3060,Redline,Kandy
+TCL Android TV 486,525361,Television,4.2,Smart Processor,Latest,3GB,Flash,65 inch,Integrated,Futureworld,Galle
+TCL Android TV 487,176634,Television,3.6,Smart Processor,Latest,1GB,Flash,55 inch,Integrated,Singer,Trincomalee
+Lenovo IdeaPad 488,240233,Laptop,4.9,Intel i7,10th Gen,16GB,SSD,512GB,NVIDIA GTX 1650,Singer,Colombo
+Hisense UHD TV 489,154478,Television,4.8,Smart Processor,Latest,4GB,Flash,32 inch,Integrated,Futureworld,Negombo
+Xiaomi Redmi Note 12 490,220461,Smartphone,3.9,Apple A15,Latest,8GB,Flash,512GB,Adreno/Mali/Apple GPU,Futureworld,Colombo
+Dell Inspiron 491,488862,Laptop,4.4,AMD Ryzen 5,10th Gen,16GB,SSD,1TB,RTX 3060,Futureworld,Kalutara
+Acer Aspire 492,215179,Laptop,3.8,AMD Ryzen 5,10th Gen,16GB,SSD,512GB,NVIDIA GTX 1650,Singer,Matale
+HP Pavilion 493,138704,Laptop,3.9,Intel i3,12th Gen,8GB,SSD,1TB,RTX 3060,Futureworld,Polonnaruwa
+Dell Inspiron 494,465113,Laptop,3.6,Intel i5,13th Gen,8GB,SSD,1TB,RTX 3060,Redline,Trincomalee
+TCL Android TV 495,212745,Television,4.2,Smart Processor,Latest,4GB,eMMC,55 inch,Integrated,Singer,Polonnaruwa
+Lenovo IdeaPad 496,348579,Laptop,4.0,Intel i3,13th Gen,8GB,SSD,256GB,NVIDIA GTX 1650,Redline,Kandy
+Samsung Smart TV 497,504073,Television,3.9,Smart Processor,Latest,1GB,Flash,43 inch,Integrated,Softlogic,Matara
+OnePlus 11 498,169622,Smartphone,3.9,Snapdragon 680,Latest,12GB,Flash,128GB,Adreno/Mali/Apple GPU,Softlogic,Polonnaruwa
+TCL Android TV 499,85032,Television,4.4,Smart Processor,Latest,3GB,eMMC,32 inch,Integrated,Softlogic,Colombo
