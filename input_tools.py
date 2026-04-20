@@ -38,14 +38,46 @@ def extract_price_from_user_input(user_input: str) -> int:
     """
 
     text = str(user_input or "")
-    numbers = re.findall(r"\d[\d,]*", text)
-    if not numbers:
-        return 0
 
-    try:
-        return int(numbers[0].replace(",", ""))
-    except (ValueError, TypeError):
-        return 0
+    def _to_amount(number_text: str, suffix: str = "") -> int:
+        try:
+            value = int(number_text.replace(",", ""))
+        except (ValueError, TypeError):
+            return 0
+
+        suffix_l = str(suffix or "").lower()
+        if suffix_l == "k":
+            value *= 1000
+        elif suffix_l in {"m", "mn"}:
+            value *= 1000000
+        elif suffix_l == "lakh":
+            value *= 100000
+
+        return value
+
+    # Currency-led amounts: Rs 50000, $1200, INR 85,000, etc.
+    currency_match = re.search(
+        r"(?:\brs\.?\b|\binr\b|\blkr\b|\busd\b|\beur\b|\bgbp\b|\$|₹)\s*(\d[\d,]*)(?:\s*(k|m|mn|lakh))?",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if currency_match:
+        amount = _to_amount(currency_match.group(1), currency_match.group(2) or "")
+        return amount if amount > 0 else 0
+
+    # Budget-context amounts: under 120000, budget 90k, for 40000, etc.
+    context_match = re.search(
+        r"(?:under|below|less\s+than|around|about|within|budget(?:\s+of)?|price(?:\s+of)?|for)\s*(\d[\d,]*)(?:\s*(k|m|mn|lakh))?",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if context_match:
+        amount = _to_amount(context_match.group(1), context_match.group(2) or "")
+        # Ignore tiny values likely coming from specs if context is ambiguous.
+        if amount >= 1000:
+            return amount
+
+    return 0
 
 
 def normalize_product_brand(product: str, user_input: str = "") -> str:
@@ -163,6 +195,14 @@ def enrich_specs(data: Dict, user_input: str) -> Dict:
         data["product"] = brand_from_input
 
     # Explicit CPU / generation preferences.
+    intel_tier_match = re.search(r"\bi\s*(3|5|7|9)\b", text)
+    if intel_tier_match:
+        data["CPU"] = f"Intel i{intel_tier_match.group(1)}"
+
+    ryzen_tier_match = re.search(r"\bryzen\s*(3|5|7|9)\b", text)
+    if ryzen_tier_match:
+        data["CPU"] = f"Ryzen {ryzen_tier_match.group(1)}"
+
     if re.search(r"(intel\s*)?i5|ryzen\s*5", text):
         data["CPU"] = "Intel i5 / Ryzen 5"
 
@@ -179,7 +219,7 @@ def enrich_specs(data: Dict, user_input: str) -> Dict:
         data["RAM"] = f"{ram_match.group(1)}GB"
 
     if not data["RAM"]:
-        simple_ram_match = re.search(r"\b(\d+)\s*gb\s*ram\b", text)
+        simple_ram_match = re.search(r"\b(\d+)\s*gb\s*(?:ram|memory)\b", text)
         if simple_ram_match:
             data["RAM"] = f"{simple_ram_match.group(1)}GB"
 

@@ -16,6 +16,22 @@ from input_history import get_recent_history, save_history
 llm = OllamaLLM(model="llama3")
 
 
+def _invoke_llm_with_fallback(prompt: str) -> str:
+    """
+    Try LLM extraction first. If Ollama model is unavailable, fall back to
+    empty JSON so rule-based enrichment can still run.
+    """
+
+    try:
+        return llm.invoke(prompt)
+    except Exception as exc:
+        message = str(exc).lower()
+        if "model" in message and "not found" in message:
+            print(f"LLM model unavailable, using rule-based fallback: {exc}")
+            return "{}"
+        raise
+
+
 def input_agent(user_input: str) -> dict:
     """
     Extract structured product specifications from user input
@@ -73,7 +89,7 @@ User Input:
 """
 
     # 🔹 Step 3: Call LLM
-    response = llm.invoke(prompt)
+    response = _invoke_llm_with_fallback(prompt)
     print("Raw:", response)
 
     # 🔹 Step 4: Clean JSON
