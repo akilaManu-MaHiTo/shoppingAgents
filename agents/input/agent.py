@@ -1,7 +1,7 @@
 from langchain_ollama import OllamaLLM
 import json
 
-from input_tools import (
+from utils.input_tools import (
     clean_json,
     validate_input,
     normalize_category,
@@ -9,9 +9,9 @@ from input_tools import (
     extract_price_from_user_input,
     enrich_specs,
     log_input,
-    classify_budget
+    classify_budget,
 )
-from input_history import get_recent_history, save_history
+from storage.input_history import get_recent_history, save_history
 
 llm = OllamaLLM(model="llama3")
 
@@ -22,10 +22,10 @@ def input_agent(user_input: str) -> dict:
     and enrich them with rule-based logic.
     """
 
-    # 🔹 Step 1: Load history (state awareness)
+    # Step 1: Load history (state awareness)
     history = get_recent_history()
 
-    # 🔹 Step 2: Prompt (STRICT, NO HALLUCINATION)
+    # Step 2: Prompt (STRICT, NO HALLUCINATION)
     prompt = f"""
 You are a strict product information extraction agent.
 
@@ -41,11 +41,11 @@ Rules:
 - product must be ONLY a known brand explicitly mentioned in the user input
 - allowed product values are ASUS, MSI, HP, or unknown
 - examples:
-    - "ASUS TUF Gaming" → "ASUS"
-    - "HP laptop" → "HP"
+    - "ASUS TUF Gaming" -> "ASUS"
+    - "HP laptop" -> "HP"
     - if the prompt does not mention ASUS/MSI/HP, output "unknown"
 - price must be a number
-- If missing → 0 or ""
+- If missing -> 0 or ""
 - DO NOT guess values
 - DO NOT invent specs
 - If the user explicitly mentions RAM, SSD, storage size, CPU generation, or GPU model, copy those fields exactly
@@ -72,11 +72,11 @@ User Input:
 "{user_input}"
 """
 
-    # 🔹 Step 3: Call LLM
+    # Step 3: Call LLM
     response = llm.invoke(prompt)
     print("Raw:", response)
 
-    # 🔹 Step 4: Clean JSON
+    # Step 4: Clean JSON
     json_text = clean_json(response)
 
     try:
@@ -84,33 +84,35 @@ User Input:
     except json.JSONDecodeError:
         data = {}
 
-    # 🔹 Step 5: Normalize category
+    # Step 5: Normalize category
     data["category"] = normalize_category(data.get("category"), user_input)
 
-    # 🔹 Step 5.1: Normalize product brand (ASUS/MSI/HP/unknown)
+    # Step 5.1: Normalize product brand (ASUS/MSI/HP/unknown)
     data["product"] = normalize_product_brand(data.get("product"), user_input)
 
-    # 🔹 Step 6: Validate base structure
+    # Step 6: Validate base structure
     data = validate_input(data)
 
-    # 🔹 Step 6.1: Use explicit user price only (ignore LLM hallucinated price)
+    # Step 6.1: Use explicit user price only (ignore LLM hallucinated price)
     user_price = extract_price_from_user_input(user_input)
     data["price"] = user_price
 
-    # 🔹 Step 7: Enrich specs (rule-based)
+    # Step 7: Enrich specs (rule-based)
     data = enrich_specs(data, user_input)
 
-    # 🔹 Step 8: Classify budget
+    # Step 8: Classify budget
     data["budgetType"] = classify_budget(data["price"], user_input)
 
-    # 🔹 Step 9: Log (observability)
+    # Step 9: Log (observability)
     log_input(data)
 
-    # 🔹 Step 10: Save to history (state passing)
-    save_history({
-        "input": user_input,
-        "output": data,
-        "budgetType": data["budgetType"]
-    })
+    # Step 10: Save to history (state passing)
+    save_history(
+        {
+            "input": user_input,
+            "output": data,
+            "budgetType": data["budgetType"],
+        }
+    )
 
     return data

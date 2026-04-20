@@ -1,5 +1,5 @@
-from input_agent import input_agent
-from search_agent import search_agent
+from agents.input import input_agent
+from agents.search import search_agent
 
 user_input = input("Enter your request: ")
 

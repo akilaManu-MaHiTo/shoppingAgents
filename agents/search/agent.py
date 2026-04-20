@@ -1,9 +1,10 @@
 import csv
 import re
+from pathlib import Path
 from typing import Dict, List, Tuple
 
 
-DATASET_PATH = "smart_shopping_dataset.csv"
+DATASET_PATH = Path(__file__).resolve().parents[2] / "smart_shopping_dataset.csv"
 
 CATEGORY_MAP = {
     "laptop": "laptop",
@@ -68,7 +69,7 @@ def _storage_type_match(requested: str, actual: str) -> bool:
     return requested_l in actual_l
 
 
-def load_products(dataset_path: str = DATASET_PATH) -> List[Dict]:
+def load_products(dataset_path: Path = DATASET_PATH) -> List[Dict]:
     products: List[Dict] = []
 
     with open(dataset_path, "r", encoding="utf-8") as f:
@@ -83,7 +84,7 @@ def load_products(dataset_path: str = DATASET_PATH) -> List[Dict]:
     return products
 
 
-def search_agent(spec: Dict, dataset_path: str = DATASET_PATH, top_n: int = 5) -> Dict:
+def search_agent(spec: Dict, dataset_path: Path = DATASET_PATH, top_n: int = 5) -> Dict:
     """
     Find product candidates from dataset using parsed user spec.
 

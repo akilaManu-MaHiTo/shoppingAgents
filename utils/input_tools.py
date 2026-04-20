@@ -1,9 +1,12 @@
 import re
 import json
+from pathlib import Path
 from typing import Dict
 
 
 KNOWN_BRANDS = {"ASUS", "MSI", "HP"}
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+LOG_FILE = PROJECT_ROOT / "agent_log.txt"
 
 
 def _extract_brand_from_input(user_input: str) -> str:
@@ -97,7 +100,7 @@ def validate_input(data: Dict) -> Dict:
         "RAM": "",
         "Storage Type": "",
         "Storage": "",
-        "GPU": ""
+        "GPU": "",
     }
 
     for key, default in schema.items():
@@ -195,7 +198,7 @@ def enrich_specs(data: Dict, user_input: str) -> Dict:
     if gpu_match:
         data["GPU"] = gpu_match.group(1).upper().replace("  ", " ")
 
-    # 🎯 USER PREFERENCES (explicit constraints)
+    # USER PREFERENCES (explicit constraints)
     if "ssd" in text:
         data["Storage Type"] = "SSD"
     elif "hdd" in text:
@@ -207,7 +210,7 @@ def enrich_specs(data: Dict, user_input: str) -> Dict:
         if not data["CPU"]:
             data["CPU"] = "Intel i5 / Ryzen 5"
 
-    # 🔥 HIGH-END
+    # HIGH-END
     if ("high end" in text or "high-end" in text) and data["category"] == "laptop":
 
         # Enforce high-end mapping by your threshold rule (> 400000).
@@ -217,7 +220,7 @@ def enrich_specs(data: Dict, user_input: str) -> Dict:
         if not data["CPU"]:
             data["CPU"] = "Intel i7 / Ryzen 7"
 
-    # 🎮 GAMING
+    # GAMING
     if "gaming" in text and data["category"] == "laptop":
 
         if not data["RAM"]:
@@ -234,7 +237,7 @@ def enrich_specs(data: Dict, user_input: str) -> Dict:
         if not data["CPU"]:
             data["CPU"] = "Intel i5 / Ryzen 5"
 
-    # 💰 LOW BUDGET
+    # LOW BUDGET
     if ("cheap" in text or "budget" in text) and data["price"] == 0:
         data["price"] = 100000
 
@@ -242,7 +245,7 @@ def enrich_specs(data: Dict, user_input: str) -> Dict:
     # then apply defaults on the cleaned values.
     data = normalize_specs(data)
 
-    # 💾 DEFAULT STORAGE
+    # DEFAULT STORAGE
     if not data["Storage"]:
         data["Storage"] = "512GB"
 
@@ -259,16 +262,15 @@ def classify_budget(price: int, user_input: str) -> str:
 
     text = user_input.lower()
 
-    # ✅ PRIORITY 1: Use price if available
+    # PRIORITY 1: Use price if available
     if price > 0:
         if price <= 100000:
             return "low"
-        elif price <= 400000:
+        if price <= 400000:
             return "mid"
-        else:
-            return "high"
+        return "high"
 
-    # ✅ PRIORITY 2: Use keywords only if price is missing
+    # PRIORITY 2: Use keywords only if price is missing
     if "cheap" in text or "budget" in text:
         return "low"
 
@@ -286,7 +288,7 @@ def log_input(data: Dict) -> None:
     Log outputs for observability.
     """
     try:
-        with open("agent_log.txt", "a") as f:
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
             f.write(json.dumps(data) + "\n")
     except IOError:
         print("Logging failed")
