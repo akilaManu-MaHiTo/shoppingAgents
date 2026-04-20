@@ -1,10 +1,15 @@
-from input_agent import input_agent
-from search_agent import search_agent
+from langgraph_flow import run_shopping_graph
 
 user_input = input("Enter your request: ")
 
-input_result = input_agent(user_input)
-search_result = search_agent(input_result)
+state = run_shopping_graph(user_input)
+input_result = state.get("input_result", {})
+search_result = state.get("search_result", {})
+error = state.get("error")
+
+if error:
+	print("\nWorkflow Error:")
+	print(error)
 
 print("\nInput Agent Output:")
 print(input_result)
