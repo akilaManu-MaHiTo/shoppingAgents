@@ -307,6 +307,7 @@ def search_agent(spec: Dict, dataset_path: str = DATASET_PATH, top_n: int = 5) -
         response_candidates.append(
             {
                 "name": row["name"],
+                "category": row.get("category", ""),
                 "price": row["price"],
                 "rating": row["rating"],
                 "RAM": row["RAM"],
