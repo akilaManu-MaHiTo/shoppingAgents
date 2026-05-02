@@ -590,5 +590,85 @@
             "budgetType": "mid"
         },
         "budgetType": "mid"
+    },
+    {
+        "input": "i need hp i7 laptop",
+        "output": {
+            "product": "HP",
+            "price": 0,
+            "category": "laptop",
+            "CPU": "Intel i7",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "unknown"
+        },
+        "budgetType": "unknown"
+    },
+    {
+        "input": "i need a i5 asus",
+        "output": {
+            "product": "ASUS",
+            "price": 0,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "unknown"
+        },
+        "budgetType": "unknown"
+    },
+    {
+        "input": "i need hp i7 laptop",
+        "output": {
+            "product": "HP",
+            "price": 0,
+            "category": "laptop",
+            "CPU": "Intel i7",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "unknown"
+        },
+        "budgetType": "unknown"
+    },
+    {
+        "input": "i need 3050 gpu and i7 cpu",
+        "output": {
+            "product": "HP",
+            "price": 0,
+            "category": "laptop",
+            "CPU": "Intel i7",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "RTX 3050",
+            "budgetType": "unknown"
+        },
+        "budgetType": "unknown"
+    },
+    {
+        "input": "i need 3050 gpu and i7 cpu",
+        "output": {
+            "product": "HP",
+            "price": 0,
+            "category": "laptop",
+            "CPU": "Intel i7",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "RTX 3050",
+            "budgetType": "unknown"
+        },
+        "budgetType": "unknown"
     }
 ]
