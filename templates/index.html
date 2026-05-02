@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Agents AI - Smart Product Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">🛍️</div>
+                    <div>
+                        <h1>Shopping Agents AI</h1>
+                        <p>Intelligent Product Finder Powered by Ollama</p>
+                    </div>
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <button class="tab-btn active" onclick="switchTab('chat')">
+                💬 Chat
+            </button>
+            <button class="tab-btn" onclick="switchTab('history')">
+                📋 History
+            </button>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="chat-container">
+            <!-- Sidebar with Instructions -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <h3>💡 How to Use</h3>
+                    <ul class="instruction-list">
+                        <li>Describe what product you need</li>
+                        <li>Mention brand, specs, budget</li>
+                        <li>Get instant recommendations</li>
+                    </ul>
+
+                    <h3>📋 Example Queries</h3>
+                    <div class="examples">
+                        <button class="example-btn" onclick="setExample('I need an ASUS laptop under 150000 with 16GB RAM')">
+                            ASUS Laptop
+                        </button>
+                        <button class="example-btn" onclick="setExample('Show me gaming laptops under 200000 with RTX GPU')">
+                            Gaming Laptop
+                        </button>
+                        <button class="example-btn" onclick="setExample('HP mobile phone budget friendly')">
+                            Budget Phone
+                        </button>
+                        <button class="example-btn" onclick="setExample('Ryzen 5 laptop with 512GB SSD under 120000')">
+                            Ryzen Laptop
+                        </button>
+                    </div>
+
+                    <h3>🎯 Supported Categories</h3>
+                    <div class="category-chips">
+                        <span class="chip">Laptops</span>
+                        <span class="chip">Mobile Phones</span>
+                    </div>
+
+                    <h3>🏢 Supported Brands</h3>
+                    <div class="brand-chips">
+                        <span class="chip brand">ASUS</span>
+                        <span class="chip brand">MSI</span>
+                        <span class="chip brand">HP</span>
+                    </div>
+
+                    <div class="info-box">
+                        <p><strong>⚡ Tip:</strong> Be specific about your needs for better recommendations!</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Chat Area -->
+            <main class="chat-main" id="chat-tab">
+                <!-- Messages Container -->
+                <div class="messages-container" id="messagesContainer">
+                    <div class="welcome-message">
+                        <div class="welcome-icon">🤖</div>
+                        <h2>Welcome to Shopping Agents AI</h2>
+                        <p>I'm your intelligent shopping assistant powered by advanced AI models. Describe what you're looking for, and I'll help you find the perfect product!</p>
+                        <div class="welcome-features">
+                            <div class="feature">
+                                <span class="feature-icon">🔍</span>
+                                <span>Smart Search</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">⚙️</span>
+                                <span>Intelligent Filtering</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">💡</span>
+                                <span>Expert Advice</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">📊</span>
+                                <span>Detailed Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-area">
+                    <form id="chatForm" onsubmit="sendMessage(event)">
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="messageInput" 
+                                placeholder="Describe the product you're looking for..."
+                                autocomplete="off"
+                            >
+                            <button type="submit" id="sendBtn" class="send-btn">
+                                <span>Send</span>
+                                <span class="send-icon">➤</span>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="input-info">
+                        <span>💬 Tip: Include brand, specs, or budget for better results</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- History Section -->
+            <main class="history-main hidden" id="history-tab">
+                <div class="history-header">
+                    <h2>📋 Search History</h2>
+                    <p class="history-count" id="historyCount">Loading...</p>
+                </div>
+                <div class="history-filters">
+                    <input type="text" id="historySearch" placeholder="🔍 Search history..." onkeyup="filterHistory()">
+                    <select id="budgetFilter" onchange="filterHistory()">
+                        <option value="">All Budgets</option>
+                        <option value="low">Low Budget</option>
+                        <option value="mid">Mid Budget</option>
+                        <option value="high">High Budget</option>
+                    </select>
+                </div>
+                <div class="history-list" id="historyList">
+                    <p class="loading">Loading history...</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Response Modal -->
+    <div id="responseModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-scroll">
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

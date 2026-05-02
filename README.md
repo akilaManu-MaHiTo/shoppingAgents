@@ -4,6 +4,32 @@ Advanced multi-agent shopping assistant powered by **LangGraph** and **Ollama LL
 
 ---
 
+## 🚀 Quick Start (3 Steps)
+
+### Step 1: Install Flask
+```bash
+pip install flask
+```
+
+### Step 2: Start Ollama Server (in a separate terminal)
+```bash
+ollama serve
+```
+
+Then pull the model:
+```bash
+ollama pull llama3
+```
+
+### Step 3: Run the Web Application
+```bash
+python app.py
+```
+
+**Open in browser**: `http://localhost:5000`
+
+---
+
 ## System Overview
 
 This is a **production-grade 4-agent orchestration system** using **LangGraph** for graph-based workflow management. The system employs:
@@ -33,6 +59,10 @@ This is a **production-grade 4-agent orchestration system** using **LangGraph** 
 | `smart_shopping_dataset.csv` | Product database (laptops, phones, etc.) | Data Source |
 | `input_history.json` | Saved user input context | State |
 | `agent_log.txt` | Append-only operational log | Logging |
+| `app.py` | Flask web server backend | Web Server |
+| `templates/index.html` | Chat UI interface | Frontend |
+| `static/style.css` | Responsive styling | Stylesheet |
+| `static/script.js` | Frontend interactivity | JavaScript |
 
 ### 4-Node LangGraph Execution Pipeline
 
@@ -74,6 +104,63 @@ START
   ↓
 END
 ```
+
+---
+
+## 💻 Web User Interface
+
+### Features
+
+✅ **Beautiful Chat Interface**
+- Modern gradient design with responsive layout
+- Real-time message streaming
+- Loading animations and visual feedback
+
+✅ **Tab Navigation**
+- **💬 Chat Tab**: Interactive chat with AI agents
+- **📋 History Tab**: Browse all previous searches
+
+✅ **Chat Functionality**
+- Type product queries naturally
+- Click example buttons for quick start
+- View full analysis in detailed modal
+- See AI reasoning for recommendations
+
+✅ **History Management**
+- View all search history with details
+- Search history by keywords
+- Filter by budget type (Low/Mid/High)
+- Click history items to search again
+- Color-coded budget indicators
+
+✅ **Detailed Analysis Modal**
+- Input Agent output (what was understood)
+- Search Agent results (candidates found)
+- Filter Agent details (filters applied)
+- Advisor output (recommendation with reasoning)
+- Product cards with specifications
+- Alternative suggestions and usage tips
+
+### Access the Web UI
+
+**Default URL**: `http://localhost:5000`
+
+**Browser Support**: Chrome, Firefox, Safari, Edge, Mobile Browsers
+
+**Responsive Design**: Works on desktop, tablet, and mobile devices
+
+### CLI vs Web UI
+
+| Feature | CLI | Web UI |
+|---------|-----|--------|
+| Easy to use | ✓ | ✓✓ |
+| Visual interface | ✗ | ✓ |
+| History tracking | ✓ | ✓✓ |
+| Search history | ✗ | ✓ |
+| Full analysis modal | ✗ | ✓ |
+| Real-time responses | ✓ | ✓ |
+| Mobile friendly | ✗ | ✓ |
+| Beautiful design | ✗ | ✓ |
 
 ---
 
@@ -646,6 +733,14 @@ langgraph>=0.2.0           # Graph orchestration engine
    - Pull model: `ollama pull llama3`
 
 3. **Run the system**:
+   
+   **Option A: Web UI (Recommended)**
+   ```bash
+   python app.py
+   # Open http://localhost:5000 in browser
+   ```
+   
+   **Option B: Command Line**
    ```bash
    python main.py
    ```

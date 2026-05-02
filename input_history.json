@@ -446,5 +446,149 @@
             "budgetType": "mid"
         },
         "budgetType": "mid"
+    },
+    {
+        "input": "I need an ASUS laptop under 150000 with 16GB RAM and RTX 3050",
+        "output": {
+            "product": "ASUS",
+            "price": 150000,
+            "category": "laptop",
+            "CPU": "",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "RTX 3050",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "I need a laptop under 120000 LKR for programming, development",
+        "output": {
+            "product": "unknown",
+            "price": 120000,
+            "category": "laptop",
+            "CPU": "Intel i3/i5 or Ryzen 3/5",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "I need an ASUS laptop under 150000 with 16GB RAM",
+        "output": {
+            "product": "ASUS",
+            "price": 150000,
+            "category": "laptop",
+            "CPU": "",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "Show me gaming laptops under 200000 with RTX GPU",
+        "output": {
+            "product": "unknown",
+            "price": 200000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "RTX",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "I need a laptop under 120000 LKR for programming, development",
+        "output": {
+            "product": "unknown",
+            "price": 120000,
+            "category": "laptop",
+            "CPU": "Intel i3/i5 or Ryzen 3/5",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "Ryzen 5 laptop with 512GB SSD under 120000",
+        "output": {
+            "product": "unknown",
+            "price": 120000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "I need a laptop under 120000 LKR for programming, development",
+        "output": {
+            "product": "unknown",
+            "price": 120000,
+            "category": "laptop",
+            "CPU": "Intel i3/i5 or Ryzen 3/5",
+            "Generation": "",
+            "RAM": "8GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
+    },
+    {
+        "input": "Show me gaming laptops under 100000",
+        "output": {
+            "product": "unknown",
+            "price": 100000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "GTX 1650",
+            "budgetType": "low"
+        },
+        "budgetType": "low"
+    },
+    {
+        "input": "I need an ASUS laptop under 150000 with 16GB RAM",
+        "output": {
+            "product": "ASUS",
+            "price": 150000,
+            "category": "laptop",
+            "CPU": "Intel i5 / Ryzen 5",
+            "Generation": "",
+            "RAM": "16GB",
+            "Storage Type": "SSD",
+            "Storage": "512GB",
+            "GPU": "",
+            "budgetType": "mid"
+        },
+        "budgetType": "mid"
     }
 ]
