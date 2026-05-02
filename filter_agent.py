@@ -1,550 +1,505 @@
 import re
 from typing import Any, Dict, List, Tuple
 
-from search_agent import (
-	CATEGORY_MAP,
-	_brand_match,
-	_component_match,
-	_normalize_storage_gb,
-	_storage_type_match,
-	_to_int,
+
+PURPOSE_QUESTION = (
+    "What is the purpose of buying this laptop? "
 )
 
 
-MIN_RATING_DEFAULT = 3.5
-
-FIELD_WEIGHTS = {
-	"GPU": 30,
-	"CPU": 20,
-	"price": 20,
-	"RAM": 15,
-	"Storage": 15,
-	"Generation": 10,
-	"brand": 10,
-	"category": 10,
-	"Storage Type": 8,
-	"rating": 6,
-	"StoreName": 6,
-	"Location": 6,
+GAMING_KEYWORDS = {
+    "gaming",
+    "gamer",
+    "game",
+    "esports",
+    "streaming",
+    "fortnite",
+    "valorant",
+    "pubg",
+    "battlefield",
+    "cod",
+    "minecraft",
+    "cyberpunk",
+    "witcher",
+    "assassin",
 }
 
+NORMAL_USE_KEYWORDS = {
+    "office",
+    "personal",
+    "simple",
+    "everyday",
+    "normal",
+    "study",
+    "school",
+    "college",
+    "business",
+    "work",
+    "browse",
+    "browsing",
+    "homework",
+    "assignments",
+    "note",
+    "notes",
+    "document",
+    "documents",
+    "email",
+    "presentation",
+    "presentations",
+}
 
-def _safe_float(value: Any) -> float:
-	try:
-		return float(value)
-	except (TypeError, ValueError):
-		return 0.0
+PROFESSIONAL_KEYWORDS = {
+    "professional",
+    "profession",
+    "coding",
+    "developer",
+    "programming",
+    "editing",
+    "creator",
+    "design",
+    "photo editing",
+    "video editing",
+    "video editor",
+    "photo editor",
+    "developer",
+    "software",
+    "engineering",
+    "engineer",
+    "data science",
+    "datascience",
+    "machine learning",
+    "ai",
+    "ml",
+}
 
-
-def _normalize_category(value: str) -> str:
-	return CATEGORY_MAP.get(str(value or "").strip().lower(), str(value or "").strip().lower())
-
-
-def _generation_match(requested: str, actual: str) -> bool:
-	if not requested:
-		return True
-	return str(requested).strip().lower() in str(actual or "").strip().lower()
-
-
-def _split_variants(text: str) -> List[str]:
-	parts = re.split(r"\s*(?:/|\||,|\bor\b|\band\b)\s*", str(text or "").strip(), flags=re.IGNORECASE)
-	return [p.strip() for p in parts if p.strip()]
-
-
-def _cpu_tier(text: str) -> Tuple[str, int]:
-	t = str(text or "").lower()
-	intel = re.search(r"\bintel\s*i\s*(3|5|7|9)\b|\bi\s*(3|5|7|9)\b", t)
-	if intel:
-		value = intel.group(1) or intel.group(2)
-		return "intel", int(value)
-
-	ryzen = re.search(r"\b(?:amd\s*)?ryzen\s*(3|5|7|9)\b", t)
-	if ryzen:
-		return "ryzen", int(ryzen.group(1))
-
-	return "", 0
-
-
-def _cpu_match(requested: str, actual: str, strict: bool = False) -> bool:
-	if not requested:
-		return True
-
-	if strict:
-		return _component_match(requested, actual, "cpu")
-
-	for variant in _split_variants(requested):
-		if _component_match(variant, actual, "cpu"):
-			return True
-
-		req_vendor, req_tier = _cpu_tier(variant)
-		act_vendor, act_tier = _cpu_tier(actual)
-		if req_vendor and act_vendor and req_vendor == act_vendor and req_tier and act_tier >= req_tier:
-			return True
-
-	return False
+HEAVY_GPU_KEYWORDS = ("rtx", "gtx", "rx ", "rx-", "mx ")
+LIGHT_GPU_KEYWORDS = ("integrated", "intel iris", "intel uhd", "adreno", "mali", "apple gpu")
 
 
-def _generation_min_match(requested: str, actual: str, strict: bool = False) -> bool:
-	if not requested:
-		return True
-
-	if strict:
-		return _generation_match(requested, actual)
-
-	req_num = _to_int(requested)
-	act_num = _to_int(actual)
-	if req_num and act_num:
-		return act_num >= req_num
-
-	return _generation_match(requested, actual)
+def _normalize_text(value: Any) -> str:
+    return re.sub(r"\s+", " ", str(value or "").strip().lower())
 
 
-def _gpu_tier_value(text: str) -> int:
-	t = str(text or "").lower()
-	rtx = re.search(r"\brtx\s*(\d{4})\b", t)
-	if rtx:
-		return 30000 + int(rtx.group(1))
-
-	gtx = re.search(r"\bgtx\s*(\d{4})\b", t)
-	if gtx:
-		return 20000 + int(gtx.group(1))
-
-	rx = re.search(r"\brx\s*(\d{4})\b", t)
-	if rx:
-		return 21000 + int(rx.group(1))
-
-	mx = re.search(r"\bmx\s*(\d{3})\b", t)
-	if mx:
-		return 10000 + int(mx.group(1))
-
-	if "integrated" in t:
-		return 1000
-
-	return 0
+def _to_int(value: Any) -> int:
+    digits = re.findall(r"\d+", str(value or ""))
+    return int(digits[0]) if digits else 0
 
 
-def _gpu_match_with_tier(requested: str, actual: str, strict: bool = False) -> bool:
-	if not requested:
-		return True
-
-	if strict:
-		return _component_match(requested, actual, "gpu")
-
-	for variant in _split_variants(requested):
-		if _component_match(variant, actual, "gpu"):
-			return True
-
-		req_tier = _gpu_tier_value(variant)
-		act_tier = _gpu_tier_value(actual)
-		if req_tier and act_tier and act_tier >= req_tier:
-			return True
-
-	return False
+def _extract_storage_gb(value: Any) -> int:
+    text = str(value or "").upper().replace(" ", "")
+    amount = _to_int(text)
+    if amount == 0:
+        return 0
+    if "TB" in text:
+        return amount * 1024
+    return amount
 
 
-def _is_user_explicit(field: str, input_result: Dict[str, Any]) -> bool:
-	"""
-	Check if a field is explicitly provided by user (in explicitConstraints).
-	Only fields in explicitConstraints are truly user-provided.
-	This is more reliable than pattern-based inference.
-	"""
-	explicit = input_result.get("explicitConstraints", {})
-	if isinstance(explicit, dict) and field in explicit:
-		return True
-	return False
+def _cpu_tier(value: Any) -> int:
+    text = _normalize_text(value)
+
+    intel_match = re.search(r"\bi\s*(3|5|7|9)\b", text)
+    if intel_match:
+        return int(intel_match.group(1))
+
+    ryzen_match = re.search(r"\bryzen\s*(3|5|7|9)\b", text)
+    if ryzen_match:
+        return int(ryzen_match.group(1))
+
+    if "apple" in text or "m1" in text or "m2" in text or "m3" in text:
+        return 7
+
+    return 0
 
 
-def _build_filter_spec(input_result: Dict[str, Any]) -> Tuple[List[Tuple[str, Any]], List[str], List[str]]:
-	explicit = input_result.get("explicitConstraints", {})
-	use_explicit = isinstance(explicit, dict) and bool(explicit)
+def _gpu_tier(value: Any) -> int:
+    text = _normalize_text(value)
 
-	def _pick(key: str, default: Any = "") -> Any:
-		if use_explicit:
-			return explicit.get(key, default)
-		return input_result.get(key, default)
+    if any(keyword in text for keyword in LIGHT_GPU_KEYWORDS):
+        return 0
 
-	# FIX: Properly resolve strict_filters from BOTH sources
-	strict_filters = set()
-	if isinstance(explicit, dict):
-		strict_filters = set(str(v).lower() for v in (explicit.get("strictFilters", []) or []))
-	if not strict_filters:
-		strict_filters = set(str(v).lower() for v in (input_result.get("strictFilters", []) or []))
+    mx_match = re.search(r"\bmx\s*(\d{3})\b", text)
+    if mx_match:
+        return 1
 
-	# FIX: Get intent mode from input (determines soft vs strict globally)
-	intent_mode = str(input_result.get("intentMode", "normal")).lower()
+    if re.search(r"\bgtx\s*\d{4}\b", text):
+        return 2
 
-	active_filters: List[Tuple[str, Any]] = []
-	filters_applied: List[str] = []
-	filters_skipped: List[str] = []
-	has_user_criteria = False
+    if re.search(r"\brtx\s*\d{4}\b", text):
+        return 3
 
-	brand = str(_pick("product", "")).strip()
-	if brand and brand.lower() != "unknown":
-		active_filters.append(("brand", {"value": brand, "strict": False, "source": "explicit" if use_explicit else "input"}))
-		filters_applied.append(f"brand:{brand}")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("brand")
+    if re.search(r"\brx\s*\d{4}\b", text):
+        return 3
 
-	budget = int(_pick("price", 0) or 0)
-	if budget > 0:
-		active_filters.append(("price", {"value": budget, "strict": False, "source": "explicit" if use_explicit else "input"}))
-		filters_applied.append(f"price:\u2264{budget}")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("price")
+    if any(keyword in text for keyword in ("dedicated", "discrete")):
+        return 2
 
-	category = _normalize_category(_pick("category", ""))
-	if category and category != "unknown":
-		active_filters.append(("category", {"value": category, "strict": False, "source": "explicit" if use_explicit else "input"}))
-		filters_applied.append(f"category:{category}")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("category")
+    if any(keyword in text for keyword in HEAVY_GPU_KEYWORDS):
+        return 2
 
-	ram_gb = _to_int(_pick("RAM", ""))
-	if ram_gb > 0:
-		active_filters.append(("RAM", {"value": ram_gb, "strict": False, "source": "explicit" if use_explicit else "input"}))
-		filters_applied.append(f"RAM:\u2265{ram_gb}GB")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("RAM")
+    if text:
+        return 1
 
-	# FIX: Use _is_user_explicit() instead of pattern-based inference
-	is_storage_explicit = _is_user_explicit("Storage", input_result)
-	storage_gb = _normalize_storage_gb(_pick("Storage", ""))
-	if storage_gb > 0 and is_storage_explicit:
-		active_filters.append(("Storage", {"value": storage_gb, "strict": False, "source": "explicit"}))
-		filters_applied.append(f"Storage:\u2265{storage_gb}GB")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("Storage")
+    return 0
 
-	is_storage_type_explicit = _is_user_explicit("Storage Type", input_result)
-	storage_type = str(_pick("Storage Type", "")).strip()
-	if storage_type and is_storage_type_explicit:
-		active_filters.append(("Storage Type", {"value": storage_type, "strict": False, "source": "explicit"}))
-		filters_applied.append(f"Storage Type:{storage_type}")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("Storage Type")
 
-	# FIX: Check strict_filters properly (case-insensitive)
-	gpu = str(_pick("GPU", "")).strip()
-	if gpu:
-		is_strict_gpu = "gpu" in strict_filters or intent_mode == "strict"
-		active_filters.append(("GPU", {"value": gpu, "strict": is_strict_gpu, "source": "explicit" if use_explicit else "input"}))
-		filters_applied.append(f"GPU:{gpu}")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("GPU")
+def _detect_purpose(user_input: str) -> str:
+    text = _normalize_text(user_input)
 
-	cpu = str(_pick("CPU", "")).strip()
-	if cpu:
-		is_strict_cpu = "cpu" in strict_filters or intent_mode == "strict"
-		active_filters.append(("CPU", {"value": cpu, "strict": is_strict_cpu, "source": "explicit" if use_explicit else "input"}))
-		filters_applied.append(f"CPU:{cpu}")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("CPU")
+    if not text:
+        return "unknown"
 
-	generation = str(_pick("Generation", "")).strip()
-	if generation:
-		is_strict_gen = "generation" in strict_filters or intent_mode == "strict"
-		active_filters.append(("Generation", {"value": generation, "strict": is_strict_gen, "source": "explicit" if use_explicit else "input"}))
-		filters_applied.append(f"Generation:{generation}")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("Generation")
+    if any(keyword in text for keyword in GAMING_KEYWORDS):
+        return "gaming"
 
-	has_explicit_rating = str(_pick("minRating", "")).strip() != ""
-	min_rating = _safe_float(_pick("minRating", MIN_RATING_DEFAULT) or MIN_RATING_DEFAULT)
-	if min_rating > 0 and (has_explicit_rating or has_user_criteria):
-		source = "explicit" if has_explicit_rating else "default"
-		active_filters.append(("rating", {"value": min_rating, "strict": False, "source": source}))
-		if source == "default":
-			filters_applied.append(f"rating(default):\u2265{min_rating}")
-		else:
-			filters_applied.append(f"rating:\u2265{min_rating}")
-	else:
-		filters_skipped.append("rating")
+    if any(keyword in text for keyword in PROFESSIONAL_KEYWORDS):
+        return "professional"
 
-	store_name = str(_pick("StoreName", "")).strip()
-	if store_name:
-		active_filters.append(("StoreName", {"value": store_name, "strict": False, "source": "explicit" if use_explicit else "input"}))
-		filters_applied.append(f"StoreName:{store_name}")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("StoreName")
+    if any(keyword in text for keyword in NORMAL_USE_KEYWORDS):
+        return "normal"
 
-	location = str(_pick("Location", "")).strip()
-	if location:
-		active_filters.append(("Location", {"value": location, "strict": False, "source": "explicit" if use_explicit else "input"}))
-		filters_applied.append(f"Location:{location}")
-		has_user_criteria = True
-	else:
-		filters_skipped.append("Location")
+    t = text.lower()
+    
+    # Smart interpretation for any user input
+    if any(w in t for w in ["game", "gaming", "gamer", "pubg", "valorant", "fortnite", "minecraft", "rtx", "gtx", "stream", "streaming"]):
+        return "gaming"
+    
+    if any(w in t for w in ["work", "office", "business", "professional", "coding", "programming", "developer", "design", "editing", "photo", "video", "ml", "ai", "data", "software"]):
+        return "professional"
 
-	return active_filters, filters_applied, filters_skipped
+    return "normal"
+
+
+def _purpose_message(purpose: str) -> str:
+    if purpose == "gaming":
+        return "Gaming laptops selected: higher GPU, stronger CPU, and 16GB+ RAM are preferred."
+    if purpose == "professional":
+        return "Professional-use laptops selected: stronger CPU and balanced RAM with no unnecessary heavy GPU bias."
+    if purpose == "normal":
+        return "Normal-use laptops selected: lighter machines with integrated or low-power graphics are preferred."
+    return PURPOSE_QUESTION
+
+
+def _clarification_questions() -> List[Dict[str, Any]]:
+    return [
+        {
+            "question": PURPOSE_QUESTION,
+            "options": [],
+        }
+    ]
+
+
+def _profile_filters(purpose: str) -> List[str]:
+    base = ["category", "rating"]
+    if purpose == "gaming":
+        return base + ["GPU", "RAM", "CPU", "Storage"]
+    if purpose == "professional":
+        return base + ["CPU", "RAM", "Storage", "GPU"]
+    if purpose == "normal":
+        return base + ["GPU", "RAM", "Storage Type", "CPU"]
+    return base
+
+
+def _is_heavy_gpu(value: Any) -> bool:
+    return _gpu_tier(value) >= 2
+
+
+def _is_light_gpu(value: Any) -> bool:
+    return _gpu_tier(value) <= 0
+
+
+def _score_candidate(candidate: Dict[str, Any], purpose: str, budget: int) -> float:
+    rating = float(candidate.get("rating", 0) or 0)
+    price = int(candidate.get("price", 0) or 0)
+    ram = _to_int(candidate.get("RAM", ""))
+    storage_gb = _extract_storage_gb(candidate.get("Storage", ""))
+    cpu = _cpu_tier(candidate.get("CPU", ""))
+    gpu = _gpu_tier(candidate.get("GPU", ""))
+    storage_type = _normalize_text(candidate.get("Storage Type", ""))
+
+    score = rating * 20
+    score += max(0, 20 - min(price / 25000, 20))
+
+    if budget > 0 and price <= budget:
+        score += 15
+    elif budget > 0 and price > budget:
+        score -= min((price - budget) / 25000, 15)
+
+    if purpose == "gaming":
+        score += gpu * 14
+        score += min(ram, 32) / 2
+        score += cpu * 2
+        if storage_gb >= 512:
+            score += 6
+    elif purpose == "professional":
+        score += cpu * 5
+        score += min(ram, 32) * 1.2
+        if storage_gb >= 512:
+            score += 6
+        if "ssd" in storage_type or "nvme" in storage_type:
+            score += 6
+        score -= gpu * 2
+    elif purpose == "normal":
+        score += max(0, 18 - gpu * 8)
+        score += min(ram, 16) * 1.3
+        if "ssd" in storage_type or "nvme" in storage_type:
+            score += 8
+        if storage_gb >= 256:
+            score += 4
+    else:
+        score += cpu * 2 + gpu * 4 + min(ram, 16)
+        if "ssd" in storage_type or "nvme" in storage_type:
+            score += 4
+
+    return round(score, 2)
+
+
+def _passes_purpose(candidate: Dict[str, Any], purpose: str, budget: int) -> Tuple[bool, List[str]]:
+    reasons: List[str] = []
+
+    category = _normalize_text(candidate.get("category", ""))
+    rating = float(candidate.get("rating", 0) or 0)
+    price = int(candidate.get("price", 0) or 0)
+    ram = _to_int(candidate.get("RAM", ""))
+    cpu = _cpu_tier(candidate.get("CPU", ""))
+    gpu = _gpu_tier(candidate.get("GPU", ""))
+    storage_gb = _extract_storage_gb(candidate.get("Storage", ""))
+    storage_type = _normalize_text(candidate.get("Storage Type", ""))
+
+    if category and category != "laptop":
+        reasons.append("Only laptop candidates are included for this purpose flow.")
+
+    if rating and rating < 3.5:
+        reasons.append("Rating is below the minimum 3.5-star threshold.")
+
+    if budget > 0 and price > budget:
+        reasons.append("Price exceeds the provided budget.")
+
+    if purpose == "gaming":
+        if ram and ram < 16:
+            reasons.append("RAM is below the 16GB gaming baseline.")
+        if cpu and cpu < 5:
+            reasons.append("CPU tier is below the gaming baseline.")
+        if gpu < 2:
+            reasons.append("GPU is too light for a gaming laptop.")
+        if storage_gb and storage_gb < 512:
+            reasons.append("Storage is below the preferred gaming capacity.")
+    elif purpose == "professional":
+        if cpu and cpu < 5:
+            reasons.append("CPU is below the professional-use baseline.")
+        if ram and ram < 8:
+            reasons.append("RAM is below the professional-use baseline.")
+        if storage_gb and storage_gb < 256:
+            reasons.append("Storage is too small for professional use.")
+    elif purpose == "normal":
+        if ram and ram < 8:
+            reasons.append("RAM is below the normal-use baseline.")
+        if _is_heavy_gpu(candidate.get("GPU", "")):
+            reasons.append("Heavy GPU is unnecessary for office or personal use.")
+        if storage_type and storage_type not in {"ssd", "nvme ssd", "nvme"}:
+            reasons.append("SSD storage is preferred for normal laptops.")
+    else:
+        if ram and ram < 8:
+            reasons.append("RAM is below the baseline for a general laptop shortlist.")
+
+    return len(reasons) == 0, reasons
 
 
 def _dedupe_candidates(candidates: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], int]:
-	grouped: Dict[Tuple[str, str, str, str, str], Dict[str, Any]] = {}
-	original_count = len(candidates)
+    seen = {}
+    duplicates_removed = 0
 
-	for item in candidates:
-		key = (
-			str(item.get("name", "")).strip().lower(),
-			str(item.get("RAM", "")).strip().lower(),
-			str(item.get("Storage", "")).strip().lower(),
-			str(item.get("GPU", "")).strip().lower(),
-			str(item.get("CPU", "")).strip().lower(),
-		)
+    for item in candidates:
+        key = (
+            _normalize_text(item.get("name", "")),
+            int(item.get("price", 0) or 0),
+        )
+        existing = seen.get(key)
+        if existing is None or float(item.get("score", 0) or 0) > float(existing.get("score", 0) or 0):
+            if existing is not None:
+                duplicates_removed += 1
+            seen[key] = item
+        else:
+            duplicates_removed += 1
 
-		existing = grouped.get(key)
-		if not existing or int(item.get("price", 0) or 0) < int(existing.get("price", 0) or 0):
-			grouped[key] = item
-
-	deduped = list(grouped.values())
-	duplicates_removed = original_count - len(deduped)
-	return deduped, duplicates_removed
+    deduped = list(seen.values())
+    return deduped, duplicates_removed
 
 
-def filter_agent(input_result: Dict[str, Any], search_result: Dict[str, Any]) -> Dict[str, Any]:
-	"""
-	Deterministic filtering engine for product candidates.
-	
-	FILTER CONTRACT (Input Requirements):
-	- input_result MUST contain:
-	  * explicitConstraints: Dict with user-provided fields (source of truth for explicit vs inferred)
-	  * Optional: intentMode ("normal" | "strict") for soft vs strict matching
-	  * Optional: strictFilters list for per-field strict control
-	
-	- search_result MUST contain:
-	  * candidates: List of Dict with fields [name, price, category, RAM, Storage, GPU, CPU, Generation, rating, StoreName, Location, Storage Type]
-	
-	FILTER CONTRACT (Output Guarantee):
-	- Always returns Dict with:
-	  * filterMode: "exact_filter" | "near_match" | "no_match"
-	  * totalFiltered: int (number of matching candidates)
-	  * filteredCandidates: List[Dict] (candidates that passed filters)
-	  * filtersApplied: List[str] (active filters used)
-	  * filtersSkipped: List[str] (filters not applied)
-	  * rejectionLog: List[Dict] (detailed rejection reasons)
-	  * duplicatesRemoved: int (deduplication count)
-	
-	IMPLICIT DEPENDENCIES (DO NOT BREAK):
-	- Relies on search_agent._component_match for GPU/CPU matching
-	- Assumes candidates enriched with category field from search_agent
-	- Assumes input_result from parse_input/input_agent pipeline
-	
-	DEBUG SNAPSHOT (for troubleshooting):
-	- Check filter_debug_snapshot in returned Dict for:
-	  * input_fields: user input summary
-	  * active_filters_count: number of active filters
-	  * candidates_received: total candidates before filtering
-	  * final_mode: which filtering mode was triggered
-	"""
-	candidates = list(search_result.get("candidates", []) or [])
-	active_filters, filters_applied, filters_skipped = _build_filter_spec(input_result)
+def filter_agent(search_result: Dict[str, Any], input_result: Dict[str, Any], user_input: str = "") -> Dict[str, Any]:
+    candidates = list(search_result.get("candidates", []) or [])
+    purpose = _detect_purpose(user_input)
+    budget = int(input_result.get("price", 0) or 0)
 
-	filtered: List[Dict[str, Any]] = []
-	rejection_log: List[Dict[str, Any]] = []
-	near_match_pool: List[Dict[str, Any]] = []
+    if not candidates:
+        return {
+            "totalFiltered": 0,
+            "filterMode": "no_match",
+            "message": "No search candidates were available to filter.",
+            "filteredResults": None,
+            "filteredCandidates": [],
+            "filtersApplied": _profile_filters(purpose),
+            "filtersSkipped": [],
+            "rejectedCount": 0,
+            "rejectionLog": [],
+            "duplicatesRemoved": 0,
+            "purposeApplied": purpose,
+            "needsClarification": purpose == "unknown",
+            "clarificationQuestions": _clarification_questions() if purpose == "unknown" else [],
+            "filter_debug_snapshot": {
+                "input_fields": {
+                    "category": input_result.get("category", ""),
+                    "price": budget,
+                    "RAM": input_result.get("RAM", ""),
+                    "CPU": input_result.get("CPU", ""),
+                    "GPU": input_result.get("GPU", ""),
+                },
+                "active_filters_count": 0,
+                "candidates_received": 0,
+                "rejection_reasons_total": 0,
+                "final_mode": "no_match",
+                "purpose": purpose,
+            },
+        }
 
-	total_active = len(active_filters)
+    scored_candidates: List[Dict[str, Any]] = []
+    rejection_log: List[Dict[str, Any]] = []
+    rejected_count = 0
 
-	for candidate in candidates:
-		rejected_by: List[str] = []
-		details: Dict[str, Dict[str, Any]] = {}
-		matched_fields = 0
-		matched_weight = 0
-		total_weight = 0
-		inferred_penalty = 0
+    for candidate in candidates:
+        passes, reasons = _passes_purpose(candidate, purpose, budget)
+        if not passes:
+            rejected_count += 1
+            rejection_log.append(
+                {
+                    "product": candidate.get("name", ""),
+                    "reasons": reasons,
+                }
+            )
+            continue
 
-		for filter_name, rule in active_filters:
-			required = rule.get("value") if isinstance(rule, dict) else rule
-			strict = bool(rule.get("strict", False)) if isinstance(rule, dict) else False
-			source = str(rule.get("source", "input")) if isinstance(rule, dict) else "input"
-			weight = int(FIELD_WEIGHTS.get(filter_name, 10))
-			total_weight += weight
-			# FIX: Make penalty proportional to field weight
-			if source == "default":
-				inferred_penalty += weight * 0.15
+        scored_candidate = dict(candidate)
+        scored_candidate["score"] = _score_candidate(candidate, purpose, budget)
+        scored_candidate["purposeMatch"] = purpose if purpose != "unknown" else "general"
+        scored_candidates.append(scored_candidate)
 
-			if filter_name == "brand":
-				ok = _brand_match(str(required), candidate.get("name", ""))
-				actual = candidate.get("name", "")
-				required_desc = required
-			elif filter_name == "price":
-				actual_price = int(candidate.get("price", 0) or 0)
-				ok = actual_price <= int(required)
-				actual = actual_price
-				required_desc = f"<={required}"
-			elif filter_name == "category":
-				actual_category = _normalize_category(candidate.get("category", ""))
-				ok = actual_category == str(required)
-				actual = actual_category
-				required_desc = required
-			elif filter_name == "RAM":
-				actual_ram = _to_int(candidate.get("RAM", ""))
-				ok = actual_ram >= int(required)
-				actual = actual_ram
-				required_desc = f">={required}GB"
-			elif filter_name == "Storage":
-				actual_storage = _normalize_storage_gb(candidate.get("Storage", ""))
-				ok = actual_storage >= int(required)
-				actual = actual_storage
-				required_desc = f">={required}GB"
-			elif filter_name == "Storage Type":
-				actual_storage_type = str(candidate.get("Storage Type", ""))
-				ok = _storage_type_match(str(required), actual_storage_type)
-				actual = actual_storage_type
-				required_desc = required
-			elif filter_name == "GPU":
-				actual_gpu = str(candidate.get("GPU", ""))
-				ok = _gpu_match_with_tier(str(required), actual_gpu, strict=strict)
-				actual = actual_gpu
-				required_desc = required
-			elif filter_name == "CPU":
-				actual_cpu = str(candidate.get("CPU", ""))
-				ok = _cpu_match(str(required), actual_cpu, strict=strict)
-				actual = actual_cpu
-				required_desc = required
-			elif filter_name == "Generation":
-				actual_generation = str(candidate.get("Generation", candidate.get("CPU", "")))
-				ok = _generation_min_match(str(required), actual_generation, strict=strict)
-				actual = actual_generation
-				required_desc = required
-			elif filter_name == "rating":
-				actual_rating = _safe_float(candidate.get("rating", 0))
-				ok = actual_rating >= float(required)
-				actual = actual_rating
-				required_desc = f">={required}"
-			elif filter_name == "StoreName":
-				actual_store = str(candidate.get("StoreName", "")).strip().lower()
-				ok = str(required).strip().lower() == actual_store
-				actual = candidate.get("StoreName", "")
-				required_desc = required
-			elif filter_name == "Location":
-				actual_location = str(candidate.get("Location", "")).strip().lower()
-				ok = str(required).strip().lower() == actual_location
-				actual = candidate.get("Location", "")
-				required_desc = required
-			else:
-				ok = True
-				actual = ""
-				required_desc = required
+    if not scored_candidates:
+        # Keep a soft fallback when purpose cannot be determined.
+        fallback_candidates = []
+        if purpose == "unknown":
+            for candidate in candidates:
+                fallback = dict(candidate)
+                fallback["score"] = _score_candidate(candidate, "unknown", budget)
+                fallback["purposeMatch"] = "general"
+                fallback_candidates.append(fallback)
+            scored_candidates = fallback_candidates
+        else:
+            return {
+                "totalFiltered": 0,
+                "filterMode": "no_match",
+                "message": _purpose_message(purpose),
+                "filteredResults": None,
+                "filteredCandidates": [],
+                "filtersApplied": _profile_filters(purpose),
+                "filtersSkipped": [],
+                "rejectedCount": rejected_count,
+                "rejectionLog": rejection_log,
+                "duplicatesRemoved": 0,
+                "purposeApplied": purpose,
+                "needsClarification": False,
+                "clarificationQuestions": [],
+                "filter_debug_snapshot": {
+                    "input_fields": {
+                        "category": input_result.get("category", ""),
+                        "price": budget,
+                        "RAM": input_result.get("RAM", ""),
+                        "CPU": input_result.get("CPU", ""),
+                        "GPU": input_result.get("GPU", ""),
+                    },
+                    "active_filters_count": len(_profile_filters(purpose)),
+                    "candidates_received": len(candidates),
+                    "rejection_reasons_total": sum(len(item.get("reasons", [])) for item in rejection_log),
+                    "final_mode": "no_match",
+                    "purpose": purpose,
+                },
+            }
 
-			if ok:
-				matched_fields += 1
-				matched_weight += weight
-			else:
-				rejected_by.append(filter_name)
-				details[filter_name] = {
-					"required": required_desc,
-					"actual": actual,
-				}
+    deduped_candidates, duplicates_removed = _dedupe_candidates(scored_candidates)
+    deduped_candidates.sort(key=lambda item: (float(item.get("score", 0) or 0), float(item.get("rating", 0) or 0)), reverse=True)
 
-		weighted_match = (matched_weight / total_weight) * 100 if total_weight else 100.0
-		weighted_match = max(0.0, min(100.0, weighted_match - inferred_penalty))
+    filters_applied = _profile_filters(purpose)
+    filters_skipped = [field for field in ["Generation", "StoreName", "Location"] if field not in filters_applied]
 
-		near_candidate = dict(candidate)
-		near_candidate["matchPercentage"] = round(weighted_match, 2)
-		near_candidate["failedFilters"] = rejected_by
-		near_candidate["_score"] = _safe_float(candidate.get("rating", 0)) * 100 - int(candidate.get("price", 0) or 0) * 0.001
-		near_match_pool.append(near_candidate)
+    clarification_needed = purpose == "unknown"
+    mode = "near_match" if clarification_needed else "exact_filter"
 
-		if rejected_by:
-			rejection_log.append(
-				{
-					"candidateName": candidate.get("name", ""),
-					"rejectedBy": rejected_by,
-					"details": details,
-				}
-			)
-			continue
+    return {
+        "totalFiltered": len(deduped_candidates),
+        "filterMode": mode,
+        "message": _purpose_message(purpose),
+        "filteredResults": deduped_candidates[0] if deduped_candidates else None,
+        "filteredCandidates": deduped_candidates,
+        "filtersApplied": filters_applied,
+        "filtersSkipped": filters_skipped,
+        "rejectedCount": rejected_count,
+        "rejectionLog": rejection_log,
+        "duplicatesRemoved": duplicates_removed,
+        "purposeApplied": purpose,
+        "needsClarification": clarification_needed,
+        "clarificationQuestions": _clarification_questions() if clarification_needed else [],
+        "filter_debug_snapshot": {
+            "input_fields": {
+                "category": input_result.get("category", ""),
+                "price": budget,
+                "RAM": input_result.get("RAM", ""),
+                "CPU": input_result.get("CPU", ""),
+                "GPU": input_result.get("GPU", ""),
+            },
+            "active_filters_count": len(filters_applied),
+            "candidates_received": len(candidates),
+            "rejection_reasons_total": sum(len(item.get("reasons", [])) for item in rejection_log),
+            "final_mode": mode,
+            "purpose": purpose,
+        },
+    }
 
-		enriched_candidate = dict(candidate)
-		enriched_candidate["matchPercentage"] = round(weighted_match, 2) if total_active else 100.0
-		enriched_candidate["_score"] = _safe_float(candidate.get("rating", 0)) * 100 - int(candidate.get("price", 0) or 0) * 0.001
-		filtered.append(enriched_candidate)
 
-	deduped, duplicates_removed = _dedupe_candidates(filtered)
-	ranked = sorted(
-		deduped,
-		key=lambda row: (
-			float(row.get("_score", 0) or 0),
-			_safe_float(row.get("rating", 0)),
-			-int(row.get("price", 0) or 0),
-		),
-		reverse=True,
-	)
+def filter_products_node(state: Dict[str, Any]) -> Dict[str, Any]:
+    if state.get("error"):
+        return {}
 
-	clean_candidates: List[Dict[str, Any]] = []
-	for item in ranked:
-		row = dict(item)
-		row.pop("_score", None)
-		clean_candidates.append(row)
-
-	# Build debug snapshot for production monitoring/troubleshooting
-	debug_snapshot = {
-		"input_fields": {
-			"product": str(input_result.get("product", "")).strip() or "any",
-			"price": input_result.get("price", 0),
-			"category": str(input_result.get("category", "")).strip() or "any",
-			"has_explicit_constraints": bool(input_result.get("explicitConstraints")),
-			"intent_mode": input_result.get("intentMode", "normal"),
-		},
-		"active_filters_count": len(active_filters),
-		"candidates_received": len(candidates),
-		"rejection_reasons_total": len(rejection_log),
-	}
-
-	# FIX: Improved near_match fallback - trigger when very few exact matches too
-	if len(clean_candidates) == 0:
-		near_candidates = [c for c in near_match_pool if float(c.get("matchPercentage", 0) or 0) >= 60.0]
-		near_candidates = sorted(
-			near_candidates,
-			key=lambda row: (
-				float(row.get("matchPercentage", 0) or 0),
-				float(row.get("_score", 0) or 0),
-			),
-			reverse=True,
-		)
-		clean_near: List[Dict[str, Any]] = []
-		for item in near_candidates:
-			row = dict(item)
-			row.pop("_score", None)
-			clean_near.append(row)
-
-		if clean_near:
-			debug_snapshot["final_mode"] = "near_match"
-			return {
-				"totalFiltered": len(clean_near),
-				"filterMode": "near_match",
-				"message": "No exact matches, showing closest alternatives.",
-				"filteredResults": clean_near[0],
-				"filteredCandidates": clean_near,
-				"filtersApplied": filters_applied,
-				"filtersSkipped": filters_skipped,
-				"rejectedCount": len(rejection_log),
-				"rejectionLog": rejection_log,
-				"duplicatesRemoved": 0,
-				"filter_debug_snapshot": debug_snapshot,
-			}
-
-	debug_snapshot["final_mode"] = "exact_filter" if clean_candidates else "no_match"
-	return {
-		"totalFiltered": len(clean_candidates),
-		"filterMode": "exact_filter" if clean_candidates else "no_match",
-		"message": "" if clean_candidates else "No products match all your criteria.",
-		"filteredResults": clean_candidates[0] if clean_candidates else None,
-		"filteredCandidates": clean_candidates,
-		"filtersApplied": filters_applied,
-		"filtersSkipped": filters_skipped,
-		"rejectedCount": len(rejection_log),
-		"rejectionLog": rejection_log,
-		"duplicatesRemoved": duplicates_removed,
-		"filter_debug_snapshot": debug_snapshot,
-	}
+    try:
+        return {
+            "filter_result": filter_agent(
+                state.get("search_result", {}),
+                state.get("input_result", {}),
+                state.get("user_input", ""),
+            )
+        }
+    except Exception as exc:
+        return {
+            "filter_result": {
+                "totalFiltered": 0,
+                "filterMode": "no_match",
+                "message": f"filter_agent_failed: {exc}",
+                "filteredResults": None,
+                "filteredCandidates": [],
+                "filtersApplied": [],
+                "filtersSkipped": [],
+                "rejectedCount": 0,
+                "rejectionLog": [],
+                "duplicatesRemoved": 0,
+                "purposeApplied": "unknown",
+                "needsClarification": True,
+                "clarificationQuestions": _clarification_questions(),
+                "filter_debug_snapshot": {
+                    "input_fields": {},
+                    "active_filters_count": 0,
+                    "candidates_received": 0,
+                    "rejection_reasons_total": 0,
+                    "final_mode": "no_match",
+                    "purpose": "unknown",
+                },
+            },
+            "error": f"filter_agent_failed: {exc}",
+        }
